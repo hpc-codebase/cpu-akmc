@@ -7,70 +7,94 @@
 
 std::string lat::LatTypesString(LatticeTypes::lat_type lat_type) {
   switch (lat_type) {
-  case LatticeTypes::V:
-    return "V";
-  case LatticeTypes::Fe:
-    return "Fe";
-  case LatticeTypes::Cu:
-    return "Cu";
-  case LatticeTypes::Ni:
-    return "Ni";
-  case LatticeTypes::Mn:
-    return "Mn";
-  case LatticeTypes::FeFe:
-    return "FeFe";
-  case LatticeTypes::FeCu:
-    return "FeCu";
-  case LatticeTypes::FeNi:
-    return "FeNi";
-  case LatticeTypes::FeMn:
-    return "FeMn";
-  case LatticeTypes::CuCu:
-    return "CuCu";
-  case LatticeTypes::CuNi:
-    return "CuNi";
-  case LatticeTypes::CuMn:
-    return "CuMn";
-  case LatticeTypes::NiNi:
-    return "NiNi";
-  case LatticeTypes::NiMn:
-    return "NiMn";
-  case LatticeTypes::MnMn:
-    return "MnMn";
+    case LatticeTypes::V:
+      return "V";
+    case LatticeTypes::Mo:
+      return "Mo";
+    case LatticeTypes::Re:
+      return "Re";
+    case LatticeTypes::Mn:
+      return "Mn";
+    case LatticeTypes::Ni:
+      return "Ni";
+    case LatticeTypes::Si:
+      return "Si";
+    case LatticeTypes::MoMo:
+      return "MoMo";
+    case LatticeTypes::MoRe:
+      return "MoRe";
+    case LatticeTypes::MoMn:
+      return "MoMn";
+    case LatticeTypes::MoNi:
+      return "MoNi";
+    case LatticeTypes::MoSi:
+      return "MoSi";
+    case LatticeTypes::ReRe:
+      return "ReRe";
+    case LatticeTypes::ReMn:
+      return "ReMn";
+    case LatticeTypes::ReNi:
+      return "ReNi";
+    case LatticeTypes::ReSi:
+      return "ReSi";
+    case LatticeTypes::MnMn:
+      return "MnMn";
+    case LatticeTypes::MnNi:
+      return "MnNi";
+    case LatticeTypes::MnSi:
+      return "MnSi";
+    case LatticeTypes::NiNi:
+      return "NiNi";
+    case LatticeTypes::NiSi:
+      return "NiSi";
+    case LatticeTypes::SiSi:
+      return "SiSi";
   }
 }
 
 LatticeTypes::lat_type lat::LatTypes(const std::string &lat_type) {
   if (lat_type == "V") {
     return LatticeTypes::V;
-  } else if (lat_type == "Fe") {
-    return LatticeTypes::Fe;
-  } else if (lat_type == "Cu") {
-    return LatticeTypes::Cu;
-  } else if (lat_type == "Ni") {
-    return LatticeTypes::Ni;
+  } else if (lat_type == "Mo") {
+    return LatticeTypes::Mo;
+  } else if (lat_type == "Re") {
+    return LatticeTypes::Re;
   } else if (lat_type == "Mn") {
     return LatticeTypes::Mn;
-  } else if (lat_type == "FeFe") {
-    return LatticeTypes::FeFe;
-  } else if (lat_type == "FeCu") {
-    return LatticeTypes::FeCu;
-  } else if (lat_type == "FeNi") {
-    return LatticeTypes::FeNi;
-  } else if (lat_type == "FeMn") {
-    return LatticeTypes::FeMn;
-  } else if (lat_type == "CuCu") {
-    return LatticeTypes::CuCu;
-  } else if (lat_type == "CuNi") {
-    return LatticeTypes::CuNi;
-  } else if (lat_type == "CuMn") {
-    return LatticeTypes::CuMn;
-  } else if (lat_type == "NiNi") {
-    return LatticeTypes::NiNi;
-  } else if (lat_type == "NiMn") {
-    return LatticeTypes::NiMn;
+  } else if (lat_type == "Ni") {
+    return LatticeTypes::Ni;
+  } else if (lat_type == "Si") {
+    return LatticeTypes::Si;
+  } else if (lat_type == "MoMo") {
+    return LatticeTypes::MoMo;
+  } else if (lat_type == "MoRe") {
+    return LatticeTypes::MoRe;
+  } else if (lat_type == "MoMn") {
+    return LatticeTypes::MoMn;
+  } else if (lat_type == "MoNi") {
+    return LatticeTypes::MoNi;
+  } else if (lat_type == "MoSi") {
+    return LatticeTypes::MoSi;
+  } else if (lat_type == "ReRe") {
+    return LatticeTypes::ReRe;
+  } else if (lat_type == "ReMn") {
+    return LatticeTypes::ReMn;
+  } else if (lat_type == "ReNi") {
+    return LatticeTypes::ReNi;
+  } else if (lat_type == "ReSi") {
+    return LatticeTypes::ReSi;
   } else if (lat_type == "MnMn") {
     return LatticeTypes::MnMn;
+  } else if (lat_type == "MnNi") {
+    return LatticeTypes::MnNi;
+  } else if (lat_type == "MnSi") {
+    return LatticeTypes::MnSi;
+  } else if (lat_type == "NiNi") {
+    return LatticeTypes::NiNi;
+  } else if (lat_type == "NiSi") {
+    return LatticeTypes::NiSi;
+  } else if (lat_type == "SiSi") {
+    return LatticeTypes::SiSi;
   } else {
     throw std::invalid_argument("wrong lattice type");
   }

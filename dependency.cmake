@@ -1,16 +1,6 @@
 ################################
 # MPI and OpenMP
 ################################
-if (KMC_OpenMP_ENABLE_FLAG)
-    find_package(OpenMP REQUIRED)
-
-    if (OPENMP_FOUND)
-        set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
-        set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
-    endif ()
-endif ()
-
 if (KMC_MPI_ENABLE_FLAG)
     find_package(MPI REQUIRED)
     MESSAGE(STATUS "MPI_INCLUDE dir:" ${MPI_INCLUDE_PATH})
@@ -28,6 +18,18 @@ if (KMC_MPI_ENABLE_FLAG)
 
     set(KMC_EXTRA_LIBS ${KMC_EXTRA_LIBS} ${MPI_LIBRARIES}) #add mpi lib
 endif ()
-##### mpi and openmp end
 
+if (KMC_OpenMP_ENABLE_FLAG)
+    find_package(OpenMP REQUIRED)
+
+    if (OPENMP_FOUND)
+        set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+        set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
+    endif ()
+endif ()
+
+##### mpi and openmp end
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 include(pkg.dep.cmake)

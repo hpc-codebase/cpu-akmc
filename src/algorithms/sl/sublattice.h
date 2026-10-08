@@ -10,6 +10,8 @@
 #include "models/model_adapter.h"
 #include "utils/random/rng_type.h"
 #include <array>
+#include <vector>
+#include "lattice/lattice.h"
 #include <comm/domain/colored_domain.h>
 
 struct SectorMeta {
@@ -39,7 +41,7 @@ public:
    * increasing. \param time_limit the max evolution time. \param T threshold
    * time for communication.
    */
-  explicit SubLattice(const comm::ColoredDomain *p_domain, const uint32_t seed_time_inc, const double time_limit,
+  explicit SubLattice(const comm::ColoredDomain *p_domain, const _type_lattice_count seed_time_inc, const double time_limit,
                       const double T);
 
   /**
@@ -57,13 +59,16 @@ public:
   template <class PKg, class PKs, class Ins, typename E>
   void startTimeLoop(Ins pk_inst, ModelAdapter<E> *p_model, EventHooks *p_event_hooks);
 
+  template <typename E> 
+  void recbPerformWrapper(ModelAdapter<E> *p_model, const type_sector_id sector_id);
+
   /**
    * \brief calculate rates in a region
    * \tparam E type of event in kmc model.
    * \param sector_id sector id
    * \return the total rates
    */
-  template <typename E> _type_rate calcRatesWrapper(ModelAdapter<E> *p_model, const type_sector_id sector_id);
+  template <typename E> _type_rate calcRatesWrapper(ModelAdapter<E> *p_model, const type_sector_id sector_id, int sect);
 
   /**
    * \brief wrapper function of event selection and performing
@@ -73,7 +78,7 @@ public:
    * \param sector_id sector id
    */
   template <typename E>
-  void selectPerformWrapper(ModelAdapter<E> *p_model, const _type_rate total_rates, const type_sector_id sector_id);
+  void selectPerformWrapper(ModelAdapter<E> *p_model, const _type_rate total_rates, const type_sector_id sector_id, int rank, _type_lattice_count step, int sect);
 
 private:
   /**
@@ -82,15 +87,23 @@ private:
    * regions. \tparam Ins packer instance creator. \param pk_inst to instant
    * the packer for communication.
    */
-  template <class PKs, class Ins> void syncSimRegions(Ins &pk_inst);
+  template <class PKs, class Ins> void syncSimRegions(Ins &pk_inst, std::array<std::unordered_set<_type_lattice_id>, 7>& exchange_ghost, std::array<std::unordered_set<_type_lattice_id>, 8>& exchange_surface_x,
+                                                      std::array<std::unordered_set<_type_lattice_id>, 8>& exchange_surface_y, std::array<std::unordered_set<_type_lattice_id>, 8>& exchange_surface_z);
 
+
+  template <class PKs, class Ins> void syncSimGohstRegionsCombine(Ins &pk_inst, std::array<std::unordered_set<_type_lattice_id>, 7>& exchange_ghost, 
+                                                                  std::array<std::unordered_set<_type_lattice_id>, 8>& exchange_surface_x,
+                                                                  std::array<std::unordered_set<_type_lattice_id>, 8>& exchange_surface_y, 
+                                                                  std::array<std::unordered_set<_type_lattice_id>, 8>& exchange_surface_z);
   /**
    * \brief communicate ghost area data of next sector in current process.
    * \tparam PKg packer used to sync ghost regions.
    * \tparam Ins packer instance creator.
    * \param pk_inst to instant the packer for communication.
    */
-  template <class PKg, class Ins> void syncNextSectorGhostRegions(Ins &pk_inst);
+  template <class PKg, class Ins> void syncNextSectorGhostRegions(Ins &pk_inst, std::array<std::unordered_set<_type_lattice_id>, 8>& exchange_surface_x,
+                                                                  std::array<std::unordered_set<_type_lattice_id>, 8>& exchange_surface_y, 
+                                                                  std::array<std::unordered_set<_type_lattice_id>, 8>& exchange_surface_z);
 
   /**
    * \brief some post operations after moved to next sector.
@@ -101,7 +114,7 @@ public:
   // todo move this type to other file
   typedef std::array<std::vector<comm::Region<comm::_type_lattice_coord>>, comm::DIMENSION_SIZE> type_comm_lat_regions;
 
-private:
+public:
   /**
    * \brief distribution to produce random numbers in range (0,1) for kmc time
    * increasing.

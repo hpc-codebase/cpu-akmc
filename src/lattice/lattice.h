@@ -9,6 +9,7 @@
 #include "type_define.h"
 #include <map>
 #include <vector>
+#include <unordered_set>
 
 /**
  * \brief lattice is a class that contains id and type of each lattice.
@@ -69,6 +70,38 @@ public:
 
 public:
   _type_lattice_id id;
+};
+
+class ChangeLattice {
+
+public:
+  /**
+   * \brief initial an lattice object on the lattice point specified by
+   * (i,j,k).
+   */
+  explicit ChangeLattice();
+
+  /*!
+   * \brief type of lattice point,e.g. Fe, or Cu, or Vacancy, or Dumbbell.
+   */
+  LatticeTypes type;
+
+  _type_lattice_id x;
+  _type_lattice_id y;
+  _type_lattice_id z;
+
+  // Define a hash function for ChangeLattice objects
+  struct Hash {
+    std::size_t operator()(const ChangeLattice& obj) const {
+      // Combine hashes of x, y, and z using XOR (^)
+      return std::hash<_type_lattice_id>()(obj.x) ^ std::hash<_type_lattice_id>()(obj.y) ^ std::hash<_type_lattice_id>()(obj.z) ^ std::hash<int>()(static_cast<int>(obj.type._type));
+    }
+  };
+
+  // Define equality operator for ChangeLattice objects
+  bool operator==(const ChangeLattice& other) const {
+    return x == other.x && y == other.y && z == other.z && type._type == other.type._type;
+  }
 };
 
 #endif // MISA_KMC_LATTICE_H

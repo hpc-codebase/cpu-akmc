@@ -16,9 +16,9 @@ namespace conf {
     CreateOption create_option = CreateOption::None;
     ;
     // random
-    unsigned long va_count = 0;
+    int64_t va_count = 0;
     std::vector<LatticeTypes::lat_type> types;
-    std::vector<unsigned int> types_ratio;
+    std::vector<int64_t> types_ratio;
     // pipe
     std::string pipe_input_box = "";
     // restart
@@ -26,18 +26,18 @@ namespace conf {
   };
 
   struct Output {
-    unsigned long dump_interval = 0;
+    int64_t dump_interval = 0;
     std::string dump_file_path = "";
-    unsigned long logs_interval = 0;
+    int64_t logs_interval = 0;
     std::string logs_file = "";
     bool logs_to_file = false;
   };
 
   struct RandomSeeds {
-    uint32_t create_types;
-    uint32_t create_vacancy;
-    uint32_t event_selection;
-    uint32_t time_inc;
+    int64_t create_types;
+    int64_t create_vacancy;
+    int64_t event_selection;
+    int64_t time_inc;
   };
 
   struct ConfigValues {
@@ -48,7 +48,7 @@ namespace conf {
     Output output;
     RandomSeeds seeds;
     // box
-    unsigned long box_size[comm::DIMENSION_SIZE];
+    int64_t box_size[comm::DIMENSION_SIZE];
 
     double lattice_const = 0.0;
 
@@ -57,7 +57,7 @@ namespace conf {
     // simulation
     double temperature = 0.0;
     double physics_time = 0.0;
-    unsigned long steps_limit = 0;
+    int64_t steps_limit = 0;
     double attempt_freq = 0.0;
     // isgenr in config file.
     bool is_def_gen = false;

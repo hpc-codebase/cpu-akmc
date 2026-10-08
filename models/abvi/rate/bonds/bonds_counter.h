@@ -33,7 +33,8 @@ namespace bonds {
      * \return the bonds energy in 1nn and 2nn neighbour lattices of the atom(\param src_atom_type) in source lattice
      */
     static _type_pair_ia count(LatticesList *lat_list, _type_lattice_id source_id, LatticeTypes src_atom_type);
-
+    static _type_pair_ia count_exchange(LatticesList *lat_list, _type_lattice_id now_id, _type_lattice_id source_id,
+                                                         LatticeTypes atom, LatticeTypes src_atom_type);
   protected:
     static const std::map<PairBond::bond_type, _type_pair_ia> _1nn_bonds;
     static const std::map<PairBond::bond_type, _type_pair_ia> _2nn_bonds;

@@ -1,7 +1,7 @@
 //
 // Created by zhaorunchu on 2018-12-06.
 // updated by genshen on 2018-12-11.
-//
+// updated by panzhijie on 2024-01-30.
 
 #ifndef MISA_KMC_LATTICES_LIST_H
 #define MISA_KMC_LATTICES_LIST_H
@@ -10,13 +10,18 @@
 #include "lattice_list_meta.h"
 #include "type_define.h"
 #include <functional>
-#include <map>
+#include <unordered_map>
 #include <vector>
+#include <unordered_set>
+#include "abvi/defect/vac_hash.h"
+#include <cassert>
+#include <omp.h>
+#include "../gpu/DeviceVacRatesSolver.h"
 
 // typedef of iteration of all lattices.
-typedef std::function<bool(const _type_lattice_coord x, const _type_lattice_coord y, const _type_lattice_coord z,
-                           Lattice &lattice)>
-    func_lattices_callback;
+// typedef std::function<bool(const _type_lattice_coord x, const _type_lattice_coord y, const _type_lattice_coord z,
+//                            Lattice &lattice)>
+//     func_lattices_callback;
 
 /**
  * \brief type of neighbour status.
@@ -66,7 +71,7 @@ public:
    * \brief iterate all lattice in this list, each lattice will be passed to
    * callback function. if the callback return false, iteration will break.
    */
-  void forAllLattices(const func_lattices_callback callback);
+  // void forAllLattices(const func_lattices_callback callback);
 
   /**
    * \brief get status of 1nn neighbour lattices.
@@ -204,6 +209,14 @@ public:
   virtual int get1nn(_type_lattice_coord x, _type_lattice_coord y, _type_lattice_coord z,
                      Lattice *_1nn_list[LatticesList::MAX_1NN]) = 0;
 
+  virtual int get1nn2(_type_lattice_coord x, _type_lattice_coord y, _type_lattice_coord z,
+                     Lattice _1nn_list[LatticesList::MAX_1NN]) = 0;
+  virtual int get1nn3(_type_lattice_coord x, _type_lattice_coord y, _type_lattice_coord z,
+                     Lattice _1nn_list[LatticesList::MAX_1NN], _type_lattice_id source_id, LatticeTypes atom_type) = 0;
+
+  virtual void getRandomLattice(const _type_lattice_coord& x, const _type_lattice_coord& y, const _type_lattice_coord& z,
+                                   _type_lattice_coord& temp_x, _type_lattice_coord& temp_y, _type_lattice_coord& temp_z, const int& randomValue) = 0;
+                                   
   /**
    * \brief similar as above one (use x,y,z to specific a lattice), but it
    * receives a lattice id. \param lid local lattice id to specific lattice
@@ -225,7 +238,11 @@ public:
    */
   virtual int get2nn(_type_lattice_coord x, _type_lattice_coord y, _type_lattice_coord z,
                      Lattice *_2nn_list[MAX_2NN]) = 0;
+  virtual int get2nn2(_type_lattice_coord x, _type_lattice_coord y, _type_lattice_coord z,
+                     Lattice _2nn_list[MAX_2NN]) = 0;
 
+  virtual int get2nn3(_type_lattice_coord x, _type_lattice_coord y, _type_lattice_coord z,
+                     Lattice _2nn_list[MAX_2NN], _type_lattice_id source_id, LatticeTypes atom_type) = 0;
   /**
    * \brief similar as above one (use x,y,z to specific a lattice), but it
    * receives a lattice id. \param lid global lattice id to specific lattice
@@ -303,7 +320,14 @@ public:
    */
   const LatListMeta meta;
 
-protected:
+  void initGpuInfo(const _type_lattice_count& total, _type_lattice_id *vac_idArray, 
+                   dev_Vacancy *h_vacancy, dev_nnLattice *h_nnneighbour);
+
+  void updateGpuInfo(_type_lattice_id& to_x, _type_lattice_id& to_y, _type_lattice_id& to_z, dev_nnLattice *h_nnneighbour_temp);
+
+  LatticeTypes::lat_type getType(const _type_lattice_id& latti_id);
+
+public:
   /*!
    * \brief the 3d array of all lattices.
    * the first dimension of this array represent x index of lattice in box,
@@ -313,7 +337,31 @@ protected:
    * [2*b_x, b_y, b_z]. the size of array in first dimension is two times then
    * the box size in x direction due to BCC structure.
    */
+  std::unordered_map<_type_lattice_id, VacancyHash> vac_hash;
+  std::unordered_set<_type_lattice_id> re_hash;
+  std::unordered_set<_type_lattice_id> mn_hash;
+  std::unordered_set<_type_lattice_id> ni_hash;
+  std::unordered_set<_type_lattice_id> si_hash;
+  std::unordered_set<_type_lattice_id> momo_hash;
+  std::unordered_set<_type_lattice_id> more_hash;
+  std::unordered_set<_type_lattice_id> rere_hash;
+
+  // 检查机制，确保 latti_id 只存在于一个哈希表中
+  void isUniqueLattiId(const _type_lattice_id& latti_id) {
+    int count = 0;
+    if (vac_hash.count(latti_id))  count++;
+    if (re_hash.count(latti_id))   count++;
+    if (mn_hash.count(latti_id))   count++;
+    if (ni_hash.count(latti_id))   count++;
+    if (si_hash.count(latti_id))   count++;
+    if (momo_hash.count(latti_id)) count++;
+    if (more_hash.count(latti_id)) count++;
+    if (rere_hash.count(latti_id)) count++;
+    assert(count <= 1); // 只有在一个哈希表中才返回 true
+  }
+
   Lattice ***_lattices = nullptr;
+
 };
 
 #endif // MISA_KMC_LATTICES_LIST_H

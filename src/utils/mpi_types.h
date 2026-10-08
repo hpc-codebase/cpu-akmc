@@ -9,6 +9,7 @@
 
 namespace mpi_types {
   extern MPI_Datatype _mpi_type_lattice_data;
+  extern MPI_Datatype _mpi_type_lattice_change;
 
   // called in initialization
   void setInterMPIType();
@@ -16,7 +17,7 @@ namespace mpi_types {
   // called when program finished
   void unsetInterMPIType();
 
-  void setMPI_DataTypeLattice(MPI_Datatype *mpi_type_lat);
+  void setMPI_DataTypeLattice(MPI_Datatype *mpi_type_lat, MPI_Datatype *mpi_type_lat_change);
 } // namespace mpi_types
 
 #endif // MISA_KMC_MPI_TYPES_H

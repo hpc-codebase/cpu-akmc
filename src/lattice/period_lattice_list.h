@@ -33,6 +33,14 @@ public:
    */
   int get1nn(_type_lattice_coord x, _type_lattice_coord y, _type_lattice_coord z, Lattice *_1nn_list[MAX_1NN]) override;
 
+  int get1nn2(_type_lattice_coord x, _type_lattice_coord y, _type_lattice_coord z, Lattice _1nn_list[MAX_1NN]) override;
+
+  int get1nn3(_type_lattice_coord x, _type_lattice_coord y, _type_lattice_coord z, Lattice _1nn_list[MAX_1NN], _type_lattice_id source_id, LatticeTypes atom_type) override;
+
+  void getRandomLattice(const _type_lattice_coord& x, const _type_lattice_coord& y, const _type_lattice_coord& z,
+                           _type_lattice_coord& temp_x, _type_lattice_coord& temp_y, _type_lattice_coord& temp_z, const int& randomValue) override;
+
+  void getnnlattice(_type_lattice_id latti_id, Lattice *_1nn_list_lattice);
   /**
    * \brief similar as above one, but it is for 2nn neighbor lattice.
    * \param x x coordinate, doubled
@@ -42,6 +50,8 @@ public:
    * distance of 2nn. \return the lattice pointers count in 2nn list
    */
   int get2nn(_type_lattice_coord x, _type_lattice_coord y, _type_lattice_coord z, Lattice *_2nn_list[6]) override;
+  int get2nn2(_type_lattice_coord x, _type_lattice_coord y, _type_lattice_coord z, Lattice _2nn_list[6]) override;
+  int get2nn3(_type_lattice_coord x, _type_lattice_coord y, _type_lattice_coord z, Lattice _2nn_list[6], _type_lattice_id source_id, LatticeTypes atom_type) override;
 };
 
 #endif // MISA_KMC_PERIODIC_LATTICE_LIST_H

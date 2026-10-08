@@ -1,10 +1,11 @@
 set(KMC_VERSION "0.1.0")
 
-option(KMC_OpenMP_ENABLE_FLAG "Use OpenMP" OFF) #change this flag to OFF to disable OpenMP
+option(KMC_OpenMP_ENABLE_FLAG "Use OpenMP" ON) #change this flag to OFF to disable OpenMP
 option(KMC_MPI_ENABLE_FLAG "Use MPI library" ON) #change this flag to false to disable mpi
-option(KMC_TEST_BUILD_ENABLE_FLAG "Enable test" ON) # enable test
+option(KMC_TEST_BUILD_ENABLE_FLAG "Enable test" OFF) # enable test
 option(KMC_TOOLS_BUILD_FLAG "Enable building tools" ON) # enable tools building
-option(KMC_TEST_MPI_ENABLE_FLAG "Enable MPI in test" ON) # enable mpi in test, its value depends on option MPI_ENABLE_FLAG.
+option(KMC_TEST_MPI_ENABLE_FLAG "Enable MPI in test" OFF) # enable mpi in test, its value depends on option MPI_ENABLE_FLAG.
+option(KMC_HIP_ENABLE_FLAG "Use GPU" ON) # change this flag to OFF to disable GPU
 
 set(KMC_RAND "MT" CACHE STRING "random number generating algorithm") # random number generating
 # options are:
@@ -16,8 +17,8 @@ set(KMC_RAND "MT" CACHE STRING "random number generating algorithm") # random nu
 
 # To perform coverage, use `-fprofile-instr-generate -fcoverage-mapping` in clang,
 # and `--coverage` or `-fprofile-arcs -ftest-coverage` in gnu.
-set(CMAKE_C_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0 -Wall")
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0 -Wall")
+#set(CMAKE_C_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0 -Wall")
+#set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0 -Wall")
 
 if (CMAKE_BUILD_TYPE MATCHES "^(Debug|DEBUG|debug)$")
     set(KMC_DEBUG_ENABLE_FLAG ON)
@@ -37,6 +38,7 @@ set(PKMC_LIB_NAME pkmc)
 set(KMC_EXECUTE_BIN_NAME ${PROJECT_NAME})
 set(KMC_TOOLS_LIB_NAME kmc-tools)
 set(KMC_TOOLS_BIN_NAME tools)
+set(KMC_GPU_LIB_NAME gpu)
 
 # test
 set(KMC_MODEL_UINT_TEST_NAME "abvi-model-unit-tests")

@@ -9,7 +9,8 @@
 #include "lattice/lattices_list.h"
 #include <comm/domain/colored_domain.h>
 #include <string>
-
+#include <unordered_map>
+#include "abvi/defect/vac_hash.h"
 class creation {
 public:
   /**
@@ -23,9 +24,9 @@ public:
    * \param va_count count of vacancy
    * \param p_domain pointer of domain.
    */
-  static void createRandom(uint32_t seed_create_types, uint32_t seed_create_vacancy, LatticesList *lats,
+  static void createRandom(int64_t seed_create_types, int64_t seed_create_vacancy, LatticesList *lats,
                            VacancyList *va_list, const std::vector<LatticeTypes::lat_type> types,
-                           const std::vector<unsigned int> types_ratio, const unsigned long va_count,
+                           const std::vector<int64_t> types_ratio, const int64_t va_count,
                            const comm::ColoredDomain *p_domain);
 
   /**
@@ -38,9 +39,9 @@ public:
    * \param types_ratio ratio of each lattice types.
    * \param p_domain pointer of domain.
    */
-  static void createFromPile(const std::string pipe_file, uint32_t seed_create_types, LatticesList *lats, VacancyList *va_list,
+  static void createFromPile(const std::string pipe_file, int64_t seed_create_types, LatticesList *lats, VacancyList *va_list,
                              const std::vector<LatticeTypes::lat_type> types,
-                             const std::vector<unsigned int> types_ratio, const comm::ColoredDomain *p_domain);
+                             const std::vector<int64_t> types_ratio, const comm::ColoredDomain *p_domain);
 
   /**
    * \brief set global id for lattices in simulation box on current process.
@@ -51,7 +52,7 @@ public:
    */
   static void setGlobalId(LatticesList *lats_list, const comm::Region<comm::_type_lattice_coord> lbr,
                           const comm::Region<comm::_type_lattice_coord> gbr,
-                          std::array<uint64_t, comm::DIMENSION_SIZE> phase_space);
+                          std::array<int64_t, comm::DIMENSION_SIZE> phase_space);
 
 private:
   /**
@@ -62,9 +63,9 @@ private:
    * \param types_ratio ratio of each lattice types.
    * \param p_domain pointer of domain.
    */
-  static void createAtomsRandom(uint32_t seed_create_types, LatticesList *lats,
+  static void createAtomsRandom(int64_t seed_create_types, LatticesList *lats,
                                 const std::vector<LatticeTypes::lat_type> types,
-                                const std::vector<unsigned int> types_ratio, const comm::ColoredDomain *p_domain);
+                                const std::vector<int64_t> types_ratio, const comm::ColoredDomain *p_domain);
 };
 
 #endif // MISA_KMC_CREATION_H

@@ -3,6 +3,7 @@ set(HEADER_FILES
         abvi/defect/defect.hpp
         abvi/defect/itl_list.h
         abvi/defect/vacancy_list.h
+        abvi/defect/vac_hash.h
         abvi/plugin/event_listener.h
         abvi/rate/bonds/bonds_counter.h
         abvi/rate/bonds/energy_dumbbell.h
@@ -22,6 +23,7 @@ set(HEADER_FILES
 set(SOURCE_FILES
         abvi/defect/itl_list.cpp
         abvi/defect/vacancy_list.cpp
+        abvi/defect/vac_hash.cpp
         abvi/rate/bonds/bonds_counter.cpp
         abvi/rate/bonds/energy_dumbbell.cpp
         abvi/rate/itl_rates_solver.cpp
@@ -43,6 +45,10 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
 # make lib.
 add_library(${KMC_MODEL_LIB_NAME} STATIC ${HEADER_FILES} ${SOURCE_FILES})
 
+target_compile_options(${KMC_MODEL_LIB_NAME} PRIVATE -D__HIP_PLATFORM_AMD__= -DTHRUST_DEVICE_SYSTEM=THRUST_DEVICE_SYSTEM_HIP  -D__HIP__ -D__HIP_PLATFORM_AMD__)
+
+target_compile_options(${KMC_MODEL_LIB_NAME} PRIVATE ${OpenMP_CXX_FLAGS})
+
 target_include_directories(
         ${KMC_MODEL_LIB_NAME}
         PUBLIC
@@ -51,6 +57,7 @@ target_include_directories(
 
 target_link_libraries(${KMC_MODEL_LIB_NAME}
         ${PKMC_LIB_NAME}
+        ${KMC_GPU_LIB_NAME}
         xoshiro::xoshiro
         kiwi::kiwi
         comm::comm

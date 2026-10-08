@@ -1,4 +1,5 @@
 vendor
+pkg
 pkg.dep.cmake
 coverage
 

@@ -34,7 +34,8 @@ public:
    * If the transition rate is not available for some direction,
    * it will leave it the array element untouched.
    */
-  std::array<_type_rate, SIZE> rates;
+  
+  _type_rate rates[SIZE];
 
   /**
    * \brief available transition direction of the defect.

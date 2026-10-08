@@ -1,0 +1,1 @@
+cmake -B ./build -H./ -DCMAKE_BUILD_TYPE=Release  -Damd_comgr_DIR=/opt/dtk-25.04/lib64/cmake/amd_comgr/amd_comgr-config.cmake

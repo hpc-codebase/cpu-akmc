@@ -32,11 +32,13 @@ void LatticeDump::dump(const std::string dump_file_path, LatticesList *lattice_l
   for (comm::_type_lattice_coord z = lbr.z_low; z < lbr.z_high; z++) {
     for (comm::_type_lattice_coord y = lbr.y_low; y < lbr.y_high; y++) {
       for (comm::_type_lattice_coord x = lbr.x_low; x < lbr.x_high; x++) {
-        Lattice &lattice = lattice_list->getLat(x, y, z);
+        // Lattice &lattice = lattice_list->getLat(x, y, z);
+        _type_lattice_size latti_id = lattice_list->getId(x, y, z);
+        LatticeTypes::lat_type latti_type = lattice_list->getType(latti_id);;
         if (x % 2 == 0) {
-          outfile << lat::LatTypesString(lattice.type._type) << "\t" << x / 2 << "\t" << y << "\t" << z << std::endl;
+          outfile << lat::LatTypesString(latti_type) << "\t" << x / 2 << "\t" << y << "\t" << z << std::endl;
         } else {
-          outfile << lat::LatTypesString(lattice.type._type) << "\t" << (x / 2 + 0.5) << "\t" << (y + 0.5) << "\t"
+          outfile << lat::LatTypesString(latti_type) << "\t" << (x / 2 + 0.5) << "\t" << (y + 0.5) << "\t"
                   << (z + 0.5) << std::endl;
         }
       }

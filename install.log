@@ -1,0 +1,1019 @@
+time="2025-07-11T17:25:31+08:00" level=info msg="installing package." pkg=github.com/Taywee/args
+time="2025-07-11T17:25:31+08:00" level=info msg="package built and installed." pkg=github.com/Taywee/args
+time="2025-07-11T17:25:31+08:00" level=info msg="installing package." pkg=github.com/jbeder/yaml-cpp
+time="2025-07-11T17:25:34+08:00" level=info msg="running [ cmake -S \"/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2\" -B \"/public/home/wangj/duhao/original_kmc/vendor/cache/github.com/jbeder/yaml-cpp\" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=\"/public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp\"  ] in directory  /public/home/wangj/duhao/original_kmc"
+CMake Deprecation Warning at CMakeLists.txt:6 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at CMakeLists.txt:9 (cmake_policy):
+  The OLD behavior for policy CMP0012 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+CMake Deprecation Warning at CMakeLists.txt:13 (cmake_policy):
+  The OLD behavior for policy CMP0015 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+-- The C compiler identification is GNU 8.5.0
+-- The CXX compiler identification is GNU 8.5.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test FLAG_WEXTRA
+-- Performing Test FLAG_WEXTRA - Success
+CMake Deprecation Warning at test/gtest-1.8.0/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at test/gtest-1.8.0/googlemock/CMakeLists.txt:41 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at test/gtest-1.8.0/googletest/CMakeLists.txt:48 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Found PythonInterp: /public/home/sghpc_sdk/Linux_x86_64/25.6/das/conda/bin/python (found version "3.10.8") 
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done (12.6s)
+-- Generating done (4.8s)
+-- Build files have been written to: /public/home/wangj/duhao/original_kmc/vendor/cache/github.com/jbeder/yaml-cpp
+time="2025-07-11T17:25:52+08:00" level=info msg="running [ cmake --build \"/public/home/wangj/duhao/original_kmc/vendor/cache/github.com/jbeder/yaml-cpp\" --target install  ] in directory  /public/home/wangj/duhao/original_kmc"
+[  1%] Building CXX object CMakeFiles/yaml-cpp.dir/src/binary.cpp.o
+[  3%] Building CXX object CMakeFiles/yaml-cpp.dir/src/convert.cpp.o
+[  5%] Building CXX object CMakeFiles/yaml-cpp.dir/src/directives.cpp.o
+[  6%] Building CXX object CMakeFiles/yaml-cpp.dir/src/emit.cpp.o
+[  8%] Building CXX object CMakeFiles/yaml-cpp.dir/src/emitfromevents.cpp.o
+[ 10%] Building CXX object CMakeFiles/yaml-cpp.dir/src/emitter.cpp.o
+[ 11%] Building CXX object CMakeFiles/yaml-cpp.dir/src/emitterstate.cpp.o
+[ 13%] Building CXX object CMakeFiles/yaml-cpp.dir/src/emitterutils.cpp.o
+[ 15%] Building CXX object CMakeFiles/yaml-cpp.dir/src/exceptions.cpp.o
+[ 16%] Building CXX object CMakeFiles/yaml-cpp.dir/src/exp.cpp.o
+[ 18%] Building CXX object CMakeFiles/yaml-cpp.dir/src/memory.cpp.o
+[ 20%] Building CXX object CMakeFiles/yaml-cpp.dir/src/node.cpp.o
+[ 21%] Building CXX object CMakeFiles/yaml-cpp.dir/src/node_data.cpp.o
+[ 23%] Building CXX object CMakeFiles/yaml-cpp.dir/src/nodebuilder.cpp.o
+[ 25%] Building CXX object CMakeFiles/yaml-cpp.dir/src/nodeevents.cpp.o
+[ 26%] Building CXX object CMakeFiles/yaml-cpp.dir/src/null.cpp.o
+[ 28%] Building CXX object CMakeFiles/yaml-cpp.dir/src/ostream_wrapper.cpp.o
+[ 30%] Building CXX object CMakeFiles/yaml-cpp.dir/src/parse.cpp.o
+[ 31%] Building CXX object CMakeFiles/yaml-cpp.dir/src/parser.cpp.o
+[ 33%] Building CXX object CMakeFiles/yaml-cpp.dir/src/regex_yaml.cpp.o
+In file included from /public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/src/regex_yaml.cpp:1:
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/src/regex_yaml.h: 在构造函数‘YAML::RegEx::RegEx(const string&, YAML::REGEX_OP)’中:
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/src/regex_yaml.h:31:20: 警告：‘<匿名>.YAML::RegEx::m_z’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ class YAML_CPP_API RegEx {
+                    ^~~~~
+[ 35%] Building CXX object CMakeFiles/yaml-cpp.dir/src/scanner.cpp.o
+[ 36%] Building CXX object CMakeFiles/yaml-cpp.dir/src/scanscalar.cpp.o
+[ 38%] Building CXX object CMakeFiles/yaml-cpp.dir/src/scantag.cpp.o
+[ 40%] Building CXX object CMakeFiles/yaml-cpp.dir/src/scantoken.cpp.o
+[ 41%] Building CXX object CMakeFiles/yaml-cpp.dir/src/simplekey.cpp.o
+[ 43%] Building CXX object CMakeFiles/yaml-cpp.dir/src/singledocparser.cpp.o
+[ 45%] Building CXX object CMakeFiles/yaml-cpp.dir/src/stream.cpp.o
+[ 46%] Building CXX object CMakeFiles/yaml-cpp.dir/src/tag.cpp.o
+[ 48%] Building CXX object CMakeFiles/yaml-cpp.dir/src/contrib/graphbuilder.cpp.o
+[ 50%] Building CXX object CMakeFiles/yaml-cpp.dir/src/contrib/graphbuilderadapter.cpp.o
+[ 51%] Linking CXX static library libyaml-cpp.a
+[ 51%] Built target yaml-cpp
+[ 53%] Building CXX object test/gtest-1.8.0/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o
+[ 55%] Building CXX object test/gtest-1.8.0/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[ 56%] Linking CXX static library libgmock.a
+[ 56%] Built target gmock
+[ 58%] Building CXX object test/CMakeFiles/run-tests.dir/integration/emitter_test.cpp.o
+[ 60%] Building CXX object test/CMakeFiles/run-tests.dir/integration/encoding_test.cpp.o
+[ 61%] Building CXX object test/CMakeFiles/run-tests.dir/integration/gen_emitter_test.cpp.o
+[ 63%] Building CXX object test/CMakeFiles/run-tests.dir/integration/handler_spec_test.cpp.o
+[ 65%] Building CXX object test/CMakeFiles/run-tests.dir/integration/handler_test.cpp.o
+In file included from /public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/integration/handler_test.cpp:2:
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:839:13: 警告：‘{anonymous}::ex8_22’ defined but not used [-Wunused-variable]
+ const char *ex8_22 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:831:13: 警告：‘{anonymous}::ex8_21’ defined but not used [-Wunused-variable]
+ const char *ex8_21 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:823:13: 警告：‘{anonymous}::ex8_20’ defined but not used [-Wunused-variable]
+ const char *ex8_20 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:818:13: 警告：‘{anonymous}::ex8_19’ defined but not used [-Wunused-variable]
+ const char *ex8_19 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:812:13: 警告：‘{anonymous}::ex8_18’ defined but not used [-Wunused-variable]
+ const char *ex8_18 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:805:13: 警告：‘{anonymous}::ex8_17’ defined but not used [-Wunused-variable]
+ const char *ex8_17 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:801:13: 警告：‘{anonymous}::ex8_16’ defined but not used [-Wunused-variable]
+ const char *ex8_16 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:793:13: 警告：‘{anonymous}::ex8_15’ defined but not used [-Wunused-variable]
+ const char *ex8_15 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:788:13: 警告：‘{anonymous}::ex8_14’ defined but not used [-Wunused-variable]
+ const char *ex8_14 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:760:13: 警告：‘{anonymous}::ex8_9’ defined but not used [-Wunused-variable]
+ const char *ex8_9 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:749:13: 警告：‘{anonymous}::ex8_8’ defined but not used [-Wunused-variable]
+ const char *ex8_8 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:743:13: 警告：‘{anonymous}::ex8_7’ defined but not used [-Wunused-variable]
+ const char *ex8_7 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:735:13: 警告：‘{anonymous}::ex8_6’ defined but not used [-Wunused-variable]
+ const char *ex8_6 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:714:13: 警告：‘{anonymous}::ex8_5’ defined but not used [-Wunused-variable]
+ const char *ex8_5 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:706:13: 警告：‘{anonymous}::ex8_4’ defined but not used [-Wunused-variable]
+ const char *ex8_4 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:702:13: 警告：‘{anonymous}::ex8_3c’ defined but not used [-Wunused-variable]
+ const char *ex8_3c =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:697:13: 警告：‘{anonymous}::ex8_3b’ defined but not used [-Wunused-variable]
+ const char *ex8_3b =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:692:13: 警告：‘{anonymous}::ex8_3a’ defined but not used [-Wunused-variable]
+ const char *ex8_3a =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:679:13: 警告：‘{anonymous}::ex8_2’ defined but not used [-Wunused-variable]
+ const char *ex8_2 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:668:13: 警告：‘{anonymous}::ex8_1’ defined but not used [-Wunused-variable]
+ const char *ex8_1 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:661:13: 警告：‘{anonymous}::ex7_24’ defined but not used [-Wunused-variable]
+ const char *ex7_24 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:654:13: 警告：‘{anonymous}::ex7_23’ defined but not used [-Wunused-variable]
+ const char *ex7_23 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:649:13: 警告：‘{anonymous}::ex7_22’ defined but not used [-Wunused-variable]
+ const char *ex7_22 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:644:13: 警告：‘{anonymous}::ex7_21’ defined but not used [-Wunused-variable]
+ const char *ex7_21 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:638:13: 警告：‘{anonymous}::ex7_20’ defined but not used [-Wunused-variable]
+ const char *ex7_20 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:633:13: 警告：‘{anonymous}::ex7_19’ defined but not used [-Wunused-variable]
+ const char *ex7_19 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:626:13: 警告：‘{anonymous}::ex7_18’ defined but not used [-Wunused-variable]
+ const char *ex7_18 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:618:13: 警告：‘{anonymous}::ex7_17’ defined but not used [-Wunused-variable]
+ const char *ex7_17 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:611:13: 警告：‘{anonymous}::ex7_16’ defined but not used [-Wunused-variable]
+ const char *ex7_16 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:607:13: 警告：‘{anonymous}::ex7_15’ defined but not used [-Wunused-variable]
+ const char *ex7_15 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:597:13: 警告：‘{anonymous}::ex7_14’ defined but not used [-Wunused-variable]
+ const char *ex7_14 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:593:13: 警告：‘{anonymous}::ex7_13’ defined but not used [-Wunused-variable]
+ const char *ex7_13 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:587:13: 警告：‘{anonymous}::ex7_12’ defined but not used [-Wunused-variable]
+ const char *ex7_12 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:582:13: 警告：‘{anonymous}::ex7_11’ defined but not used [-Wunused-variable]
+ const char *ex7_11 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:568:13: 警告：‘{anonymous}::ex7_10’ defined but not used [-Wunused-variable]
+ const char *ex7_10 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:562:13: 警告：‘{anonymous}::ex7_9’ defined but not used [-Wunused-variable]
+ const char *ex7_9 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:557:13: 警告：‘{anonymous}::ex7_8’ defined but not used [-Wunused-variable]
+ const char *ex7_8 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:555:13: 警告：‘{anonymous}::ex7_7’ defined but not used [-Wunused-variable]
+ const char *ex7_7 = " 'here''s to \"quotes\"'";
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:549:13: 警告：‘{anonymous}::ex7_6’ defined but not used [-Wunused-variable]
+ const char *ex7_6 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:542:13: 警告：‘{anonymous}::ex7_5’ defined but not used [-Wunused-variable]
+ const char *ex7_5 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:537:13: 警告：‘{anonymous}::ex7_4’ defined but not used [-Wunused-variable]
+ const char *ex7_4 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:531:13: 警告：‘{anonymous}::ex7_3’ defined but not used [-Wunused-variable]
+ const char *ex7_3 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:525:13: 警告：‘{anonymous}::ex7_2’ defined but not used [-Wunused-variable]
+ const char *ex7_2 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:519:13: 警告：‘{anonymous}::ex7_1’ defined but not used [-Wunused-variable]
+ const char *ex7_1 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:515:13: 警告：‘{anonymous}::ex6_29’ defined but not used [-Wunused-variable]
+ const char *ex6_29 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:509:13: 警告：‘{anonymous}::ex6_28’ defined but not used [-Wunused-variable]
+ const char *ex6_28 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:504:13: 警告：‘{anonymous}::ex6_27b’ defined but not used [-Wunused-variable]
+ const char *ex6_27b =
+             ^~~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:499:13: 警告：‘{anonymous}::ex6_27a’ defined but not used [-Wunused-variable]
+ const char *ex6_27a =
+             ^~~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:492:13: 警告：‘{anonymous}::ex6_26’ defined but not used [-Wunused-variable]
+ const char *ex6_26 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:488:13: 警告：‘{anonymous}::ex6_25’ defined but not used [-Wunused-variable]
+ const char *ex6_25 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:484:13: 警告：‘{anonymous}::ex6_24’ defined but not used [-Wunused-variable]
+ const char *ex6_24 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:479:13: 警告：‘{anonymous}::ex6_23’ defined but not used [-Wunused-variable]
+ const char *ex6_23 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:474:13: 警告：‘{anonymous}::ex6_22’ defined but not used [-Wunused-variable]
+ const char *ex6_22 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:465:13: 警告：‘{anonymous}::ex6_21’ defined but not used [-Wunused-variable]
+ const char *ex6_21 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:460:13: 警告：‘{anonymous}::ex6_20’ defined but not used [-Wunused-variable]
+ const char *ex6_20 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:455:13: 警告：‘{anonymous}::ex6_19’ defined but not used [-Wunused-variable]
+ const char *ex6_19 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:446:13: 警告：‘{anonymous}::ex6_18’ defined but not used [-Wunused-variable]
+ const char *ex6_18 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:441:13: 警告：‘{anonymous}::ex6_17’ defined but not used [-Wunused-variable]
+ const char *ex6_17 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:436:13: 警告：‘{anonymous}::ex6_16’ defined but not used [-Wunused-variable]
+ const char *ex6_16 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:431:13: 警告：‘{anonymous}::ex6_15’ defined but not used [-Wunused-variable]
+ const char *ex6_15 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:425:13: 警告：‘{anonymous}::ex6_14’ defined but not used [-Wunused-variable]
+ const char *ex6_14 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:420:13: 警告：‘{anonymous}::ex6_13’ defined but not used [-Wunused-variable]
+ const char *ex6_13 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:412:13: 警告：‘{anonymous}::ex6_12’ defined but not used [-Wunused-variable]
+ const char *ex6_12 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:406:13: 警告：‘{anonymous}::ex6_11’ defined but not used [-Wunused-variable]
+ const char *ex6_11 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:401:13: 警告：‘{anonymous}::ex6_10’ defined but not used [-Wunused-variable]
+ const char *ex6_10 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:397:13: 警告：‘{anonymous}::ex6_9’ defined but not used [-Wunused-variable]
+ const char *ex6_9 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:388:13: 警告：‘{anonymous}::ex6_8’ defined but not used [-Wunused-variable]
+ const char *ex6_8 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:380:13: 警告：‘{anonymous}::ex6_7’ defined but not used [-Wunused-variable]
+ const char *ex6_7 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:371:13: 警告：‘{anonymous}::ex6_6’ defined but not used [-Wunused-variable]
+ const char *ex6_6 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:362:13: 警告：‘{anonymous}::ex6_5’ defined but not used [-Wunused-variable]
+ const char *ex6_5 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:353:13: 警告：‘{anonymous}::ex6_4’ defined but not used [-Wunused-variable]
+ const char *ex6_4 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:348:13: 警告：‘{anonymous}::ex6_3’ defined but not used [-Wunused-variable]
+ const char *ex6_3 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:342:13: 警告：‘{anonymous}::ex6_2’ defined but not used [-Wunused-variable]
+ const char *ex6_2 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:328:13: 警告：‘{anonymous}::ex6_1’ defined but not used [-Wunused-variable]
+ const char *ex6_1 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:323:13: 警告：‘{anonymous}::ex5_14’ defined but not used [-Wunused-variable]
+ const char *ex5_14 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:316:13: 警告：‘{anonymous}::ex5_13’ defined but not used [-Wunused-variable]
+ const char *ex5_13 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:308:13: 警告：‘{anonymous}::ex5_12’ defined but not used [-Wunused-variable]
+ const char *ex5_12 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:303:13: 警告：‘{anonymous}::ex5_11’ defined but not used [-Wunused-variable]
+ const char *ex5_11 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:296:13: 警告：‘{anonymous}::ex5_8’ defined but not used [-Wunused-variable]
+ const char *ex5_8 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:288:13: 警告：‘{anonymous}::ex5_7’ defined but not used [-Wunused-variable]
+ const char *ex5_7 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:284:13: 警告：‘{anonymous}::ex5_6’ defined but not used [-Wunused-variable]
+ const char *ex5_6 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:282:13: 警告：‘{anonymous}::ex5_5’ defined but not used [-Wunused-variable]
+ const char *ex5_5 = "# Comment only.";
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:278:13: 警告：‘{anonymous}::ex5_4’ defined but not used [-Wunused-variable]
+ const char *ex5_4 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:269:13: 警告：‘{anonymous}::ex5_3’ defined but not used [-Wunused-variable]
+ const char *ex5_3 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:239:13: 警告：‘{anonymous}::ex2_28’ defined but not used [-Wunused-variable]
+ const char *ex2_28 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:208:13: 警告：‘{anonymous}::ex2_27’ defined but not used [-Wunused-variable]
+ const char *ex2_27 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:199:13: 警告：‘{anonymous}::ex2_26’ defined but not used [-Wunused-variable]
+ const char *ex2_26 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:190:13: 警告：‘{anonymous}::ex2_25’ defined but not used [-Wunused-variable]
+ const char *ex2_25 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:174:13: 警告：‘{anonymous}::ex2_24’ defined but not used [-Wunused-variable]
+ const char *ex2_24 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:159:13: 警告：‘{anonymous}::ex2_23’ defined but not used [-Wunused-variable]
+ const char *ex2_23 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:149:13: 警告：‘{anonymous}::ex2_18’ defined but not used [-Wunused-variable]
+ const char *ex2_18 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:140:13: 警告：‘{anonymous}::ex2_17’ defined but not used [-Wunused-variable]
+ const char *ex2_17 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:131:13: 警告：‘{anonymous}::ex2_16’ defined but not used [-Wunused-variable]
+ const char *ex2_16 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:121:13: 警告：‘{anonymous}::ex2_15’ defined but not used [-Wunused-variable]
+ const char *ex2_15 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:115:13: 警告：‘{anonymous}::ex2_14’ defined but not used [-Wunused-variable]
+ const char *ex2_14 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:109:13: 警告：‘{anonymous}::ex2_13’ defined but not used [-Wunused-variable]
+ const char *ex2_13 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:99:13: 警告：‘{anonymous}::ex2_12’ defined but not used [-Wunused-variable]
+ const char *ex2_12 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:88:13: 警告：‘{anonymous}::ex2_11’ defined but not used [-Wunused-variable]
+ const char *ex2_11 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:78:13: 警告：‘{anonymous}::ex2_10’ defined but not used [-Wunused-variable]
+ const char *ex2_10 =
+             ^~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:68:13: 警告：‘{anonymous}::ex2_9’ defined but not used [-Wunused-variable]
+ const char *ex2_9 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:56:13: 警告：‘{anonymous}::ex2_8’ defined but not used [-Wunused-variable]
+ const char *ex2_8 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:44:13: 警告：‘{anonymous}::ex2_7’ defined but not used [-Wunused-variable]
+ const char *ex2_7 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:37:13: 警告：‘{anonymous}::ex2_6’ defined but not used [-Wunused-variable]
+ const char *ex2_6 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:32:13: 警告：‘{anonymous}::ex2_5’ defined but not used [-Wunused-variable]
+ const char *ex2_5 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:22:13: 警告：‘{anonymous}::ex2_4’ defined but not used [-Wunused-variable]
+ const char *ex2_4 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:12:13: 警告：‘{anonymous}::ex2_3’ defined but not used [-Wunused-variable]
+ const char *ex2_3 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:7:13: 警告：‘{anonymous}::ex2_2’ defined but not used [-Wunused-variable]
+ const char *ex2_2 =
+             ^~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/github.com/jbeder/yaml-cpp@yaml-cpp-0.6.2/test/specexamples.h:2:13: 警告：‘{anonymous}::ex2_1’ defined but not used [-Wunused-variable]
+ const char *ex2_1 =
+             ^~~~~
+[ 66%] Building CXX object test/CMakeFiles/run-tests.dir/integration/load_node_test.cpp.o
+[ 68%] Building CXX object test/CMakeFiles/run-tests.dir/integration/node_spec_test.cpp.o
+[ 70%] Building CXX object test/CMakeFiles/run-tests.dir/main.cpp.o
+[ 71%] Building CXX object test/CMakeFiles/run-tests.dir/node/node_test.cpp.o
+[ 73%] Building CXX object test/CMakeFiles/run-tests.dir/ostream_wrapper_test.cpp.o
+[ 75%] Building CXX object test/CMakeFiles/run-tests.dir/regex_test.cpp.o
+[ 76%] Linking CXX executable run-tests
+[ 76%] Built target run-tests
+[ 78%] Building CXX object test/gtest-1.8.0/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o
+[ 80%] Building CXX object test/gtest-1.8.0/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o
+[ 81%] Building CXX object test/gtest-1.8.0/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[ 83%] Linking CXX static library libgmock_main.a
+[ 83%] Built target gmock_main
+[ 85%] Building CXX object test/gtest-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 86%] Linking CXX static library libgtest.a
+[ 86%] Built target gtest
+[ 88%] Building CXX object test/gtest-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[ 90%] Linking CXX static library libgtest_main.a
+[ 90%] Built target gtest_main
+[ 91%] Building CXX object util/CMakeFiles/parse.dir/parse.cpp.o
+[ 93%] Linking CXX executable parse
+[ 93%] Built target parse
+[ 95%] Building CXX object util/CMakeFiles/sandbox.dir/sandbox.cpp.o
+[ 96%] Linking CXX executable sandbox
+[ 96%] Built target sandbox
+[ 98%] Building CXX object util/CMakeFiles/read.dir/read.cpp.o
+[100%] Linking CXX executable read
+[100%] Built target read
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/lib/libyaml-cpp.a
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/emittermanip.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/dll.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/emitterdef.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/eventhandler.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/null.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/emitterstyle.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/stlemitter.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/ostream_wrapper.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/emit.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/impl.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/iterator.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/node.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/parse.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/convert.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/ptr.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/type.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/detail
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/detail/bool_type.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/detail/iterator.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/detail/impl.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/detail/memory.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/detail/node_ref.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/detail/iterator_fwd.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/detail/node.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/detail/node_data.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/node/detail/node_iterator.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/binary.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/emitter.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/anchor.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/emitfromevents.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/mark.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/exceptions.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/noncopyable.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/parser.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/traits.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/yaml.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/contrib
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/contrib/anchordict.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/yaml-cpp/contrib/graphbuilder.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/lib/cmake/yaml-cpp/yaml-cpp-config.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/lib/cmake/yaml-cpp/yaml-cpp-config-version.cmake
+-- Old export file "/public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/lib/cmake/yaml-cpp/yaml-cpp-targets.cmake" will be replaced.  Removing files [/public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/lib/cmake/yaml-cpp/yaml-cpp-targets-release.cmake].
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/lib/cmake/yaml-cpp/yaml-cpp-targets.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/lib/cmake/yaml-cpp/yaml-cpp-targets-release.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/lib/pkgconfig/yaml-cpp.pc
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/lib/libgmock.a
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/lib/libgmock_main.a
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/gmock-cardinalities.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/gmock-generated-actions.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/gmock-generated-actions.h.pump
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/gmock-generated-matchers.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/gmock-generated-matchers.h.pump
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/gmock-more-actions.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/gmock-spec-builders.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/gmock-actions.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/gmock-generated-function-mockers.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/gmock-generated-function-mockers.h.pump
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/gmock-generated-nice-strict.h.pump
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/gmock-generated-nice-strict.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/gmock-matchers.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/gmock-more-matchers.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/gmock.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/internal
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/internal/gmock-generated-internal-utils.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/internal/gmock-port.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/internal/custom
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/internal/custom/gmock-generated-actions.h.pump
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/internal/custom/gmock-matchers.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/internal/custom/gmock-port.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/internal/custom/gmock-generated-actions.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/internal/gmock-generated-internal-utils.h.pump
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gmock/internal/gmock-internal-utils.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/lib/libgtest.a
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/lib/libgtest_main.a
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/gtest-death-test.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/gtest-spi.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/gtest-message.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/gtest-param-test.h.pump
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/gtest_prod.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/gtest-filepath.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/gtest-port-arch.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/gtest-param-util-generated.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/gtest-param-util.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/gtest-type-util.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/gtest-type-util.h.pump
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/gtest-death-test-internal.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/gtest-linked_ptr.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/gtest-internal.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/gtest-param-util-generated.h.pump
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/gtest-port.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/gtest-string.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/gtest-tuple.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/gtest-tuple.h.pump
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/custom
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/custom/gtest-printers.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/custom/gtest-port.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/internal/custom/gtest.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/gtest-param-test.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/gtest-printers.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/gtest-test-part.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/gtest-typed-test.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/gtest.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/jbeder/yaml-cpp/include/gtest/gtest_pred_impl.h
+time="2025-07-11T17:28:18+08:00" level=info msg="package built and installed." pkg=github.com/jbeder/yaml-cpp
+time="2025-07-11T17:28:18+08:00" level=info msg="installing package." pkg=github.com/google/googletest
+time="2025-07-11T17:28:19+08:00" level=info msg="running [ cmake -S \"/public/home/wangj/duhao/original_kmc/vendor/src/github.com/google/googletest@release-1.10.0\" -B \"/public/home/wangj/duhao/original_kmc/vendor/cache/github.com/google/googletest\" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=\"/public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest\"  ] in directory  /public/home/wangj/duhao/original_kmc"
+CMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- The C compiler identification is GNU 8.5.0
+-- The CXX compiler identification is GNU 8.5.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Deprecation Warning at googlemock/CMakeLists.txt:45 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at googletest/CMakeLists.txt:56 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Found PythonInterp: /public/home/sghpc_sdk/Linux_x86_64/25.6/das/conda/bin/python (found version "3.10.8") 
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done (4.0s)
+-- Generating done (0.8s)
+-- Build files have been written to: /public/home/wangj/duhao/original_kmc/vendor/cache/github.com/google/googletest
+time="2025-07-11T17:28:24+08:00" level=info msg="running [ cmake --build \"/public/home/wangj/duhao/original_kmc/vendor/cache/github.com/google/googletest\" --target install  ] in directory  /public/home/wangj/duhao/original_kmc"
+[ 12%] Building CXX object googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 25%] Linking CXX static library ../lib/libgtest.a
+[ 25%] Built target gtest
+[ 37%] Building CXX object googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[ 50%] Linking CXX static library ../lib/libgmock.a
+[ 50%] Built target gmock
+[ 62%] Building CXX object googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[ 75%] Linking CXX static library ../lib/libgmock_main.a
+[ 75%] Built target gmock_main
+[ 87%] Building CXX object googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[100%] Linking CXX static library ../lib/libgtest_main.a
+[100%] Built target gtest_main
+Install the project...
+-- Install configuration: "Release"
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/gmock-cardinalities.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/gmock-actions.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/gmock-generated-actions.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/gmock-generated-actions.h.pump
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/gmock-generated-function-mockers.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/gmock-more-actions.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/gmock-matchers.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/gmock-more-matchers.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/gmock-nice-strict.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/internal
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/internal/gmock-pp.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/internal/custom
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/internal/custom/gmock-generated-actions.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/internal/custom/README.md
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/internal/custom/gmock-port.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/internal/custom/gmock-matchers.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/internal/custom/gmock-generated-actions.h.pump
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/internal/gmock-internal-utils.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/internal/gmock-port.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/gmock-function-mocker.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/gmock-generated-function-mockers.h.pump
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/gmock-generated-matchers.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/gmock-generated-matchers.h.pump
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/gmock-spec-builders.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gmock/gmock.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/lib64/libgmock.a
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/lib64/libgmock_main.a
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/lib64/pkgconfig/gmock.pc
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/lib64/pkgconfig/gmock_main.pc
+-- Old export file "/public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/lib64/cmake/GTest/GTestTargets.cmake" will be replaced.  Removing files [/public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/lib64/cmake/GTest/GTestTargets-release.cmake].
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/lib64/cmake/GTest/GTestTargets.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/lib64/cmake/GTest/GTestTargets-release.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/lib64/cmake/GTest/GTestConfigVersion.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/lib64/cmake/GTest/GTestConfig.cmake
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/gtest-death-test.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/gtest-matchers.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/gtest-message.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/gtest-spi.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/gtest-param-test.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/gtest-printers.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/gtest-test-part.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/gtest-typed-test.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/gtest_prod.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/internal
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/internal/gtest-filepath.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/internal/gtest-internal.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/internal/gtest-type-util.h.pump
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/internal/custom
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/internal/custom/gtest-port.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/internal/custom/gtest-printers.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/internal/custom/README.md
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/internal/custom/gtest.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/internal/gtest-death-test-internal.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/internal/gtest-param-util.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/internal/gtest-type-util.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/internal/gtest-port.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/internal/gtest-port-arch.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/internal/gtest-string.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/gtest.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/include/gtest/gtest_pred_impl.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/lib64/libgtest.a
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/lib64/libgtest_main.a
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/lib64/pkgconfig/gtest.pc
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/google/googletest/lib64/pkgconfig/gtest_main.pc
+time="2025-07-11T17:28:46+08:00" level=info msg="package built and installed." pkg=github.com/google/googletest
+time="2025-07-11T17:28:46+08:00" level=info msg="installing package." pkg=github.com/fmtlib/fmt
+time="2025-07-11T17:28:46+08:00" level=info msg="running [ cmake -S \"/public/home/wangj/duhao/original_kmc/vendor/src/github.com/fmtlib/fmt@6.1.2\" -B \"/public/home/wangj/duhao/original_kmc/vendor/cache/github.com/fmtlib/fmt\" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=\"/public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt\" -DFMT_TEST=OFF -DFMT_DOC=OFF  ] in directory  /public/home/wangj/duhao/original_kmc"
+-- CMake version: 3.26.5
+-- The CXX compiler identification is GNU 8.5.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Version: 6.1.2
+-- Build type: Release
+-- CXX_STANDARD: 11
+-- Performing Test has_std_11_flag
+-- Performing Test has_std_11_flag - Success
+-- Performing Test has_std_0x_flag
+-- Performing Test has_std_0x_flag - Success
+-- Performing Test SUPPORTS_VARIADIC_TEMPLATES
+-- Performing Test SUPPORTS_VARIADIC_TEMPLATES - Success
+-- Performing Test SUPPORTS_USER_DEFINED_LITERALS
+-- Performing Test SUPPORTS_USER_DEFINED_LITERALS - Success
+-- Performing Test FMT_HAS_VARIANT
+-- Performing Test FMT_HAS_VARIANT - Success
+-- Looking for strtod_l
+-- Looking for strtod_l - found
+-- Configuring done (5.2s)
+-- Generating done (0.2s)
+-- Build files have been written to: /public/home/wangj/duhao/original_kmc/vendor/cache/github.com/fmtlib/fmt
+time="2025-07-11T17:28:52+08:00" level=info msg="running [ cmake --build \"/public/home/wangj/duhao/original_kmc/vendor/cache/github.com/fmtlib/fmt\" --target install  ] in directory  /public/home/wangj/duhao/original_kmc"
+[ 33%] Building CXX object CMakeFiles/fmt.dir/src/format.cc.o
+[ 66%] Building CXX object CMakeFiles/fmt.dir/src/posix.cc.o
+[100%] Linking CXX static library libfmt.a
+[100%] Built target fmt
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/lib64/cmake/fmt/fmt-config.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/lib64/cmake/fmt/fmt-config-version.cmake
+-- Old export file "/public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/lib64/cmake/fmt/fmt-targets.cmake" will be replaced.  Removing files [/public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/lib64/cmake/fmt/fmt-targets-release.cmake].
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/lib64/cmake/fmt/fmt-targets.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/lib64/cmake/fmt/fmt-targets-release.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/lib64/libfmt.a
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/include/fmt/chrono.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/include/fmt/color.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/include/fmt/compile.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/include/fmt/core.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/include/fmt/format.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/include/fmt/format-inl.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/include/fmt/locale.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/include/fmt/ostream.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/include/fmt/posix.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/include/fmt/printf.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/include/fmt/ranges.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/fmtlib/fmt/lib64/pkgconfig/fmt.pc
+time="2025-07-11T17:29:05+08:00" level=info msg="package built and installed." pkg=github.com/fmtlib/fmt
+time="2025-07-11T17:29:05+08:00" level=info msg="installing package." pkg=git.hpcer.dev/genshen/kiwi
+time="2025-07-11T17:29:05+08:00" level=info msg="running [ cmake -S \"/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/genshen/kiwi@v0.3.1\" -B \"/public/home/wangj/duhao/original_kmc/vendor/cache/git.hpcer.dev/genshen/kiwi\" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=\"/public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi\"  ] in directory  /public/home/wangj/duhao/original_kmc"
+-- The C compiler identification is GNU 8.5.0
+-- The CXX compiler identification is GNU 8.5.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found MPI_C: /public/home/sghpc_sdk/Linux_x86_64/25.6/comm_libs/openmpi/5.0.3-flang/lib/libmpi.so (found version "3.1") 
+-- Found MPI_CXX: /public/home/sghpc_sdk/Linux_x86_64/25.6/comm_libs/openmpi/5.0.3-flang/lib/libmpi.so (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- MPI_INCLUDE dir:/public/home/sghpc_sdk/Linux_x86_64/25.6/comm_libs/openmpi/5.0.3-flang/include/public/home/sghpc_sdk/Linux_x86_64/25.6/comm_libs/openmpi/5.0.3-flang/include/openmpi
+-- MPI_LIBRARIES dir:/public/home/sghpc_sdk/Linux_x86_64/25.6/comm_libs/openmpi/5.0.3-flang/lib/libmpi.so
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Looking for MPI_Mprobe
+-- Looking for MPI_Mprobe - found
+-- TEST is enabled
+-- MPI in test: 
+-- Configuring done (17.8s)
+-- Generating done (1.0s)
+-- Build files have been written to: /public/home/wangj/duhao/original_kmc/vendor/cache/git.hpcer.dev/genshen/kiwi
+time="2025-07-11T17:29:25+08:00" level=info msg="running [ cmake --build \"/public/home/wangj/duhao/original_kmc/vendor/cache/git.hpcer.dev/genshen/kiwi\" --target install  ] in directory  /public/home/wangj/duhao/original_kmc"
+[  5%] Building CXX object src/CMakeFiles/kiwi.dir/kiwi_app.cpp.o
+[ 10%] Building CXX object src/CMakeFiles/kiwi.dir/config/config.cpp.o
+[ 15%] Building CXX object src/CMakeFiles/kiwi.dir/event/message_looper.cpp.o
+[ 21%] Building CXX object src/CMakeFiles/kiwi.dir/io/local_storage.cpp.o
+[ 26%] Building CXX object src/CMakeFiles/kiwi.dir/io/io_writer.cpp.o
+[ 31%] Building CXX object src/CMakeFiles/kiwi.dir/logs/logs.cpp.o
+[ 36%] Building CXX object src/CMakeFiles/kiwi.dir/utils/bundle.cpp.o
+[ 42%] Building CXX object src/CMakeFiles/kiwi.dir/utils/mpi_utils.cpp.o
+[ 47%] Linking CXX static library ../lib/libkiwi.a
+[ 47%] Built target kiwi
+[ 52%] Building CXX object tests/unit/CMakeFiles/kiwi-unit-test.dir/main.cpp.o
+[ 57%] Building CXX object tests/unit/CMakeFiles/kiwi-unit-test.dir/config/config.cpp.o
+[ 63%] Building CXX object tests/unit/CMakeFiles/kiwi-unit-test.dir/event/message_loop_test.cpp.o
+[ 68%] Building CXX object tests/unit/CMakeFiles/kiwi-unit-test.dir/io/io_utils_test.cpp.o
+[ 73%] Building CXX object tests/unit/CMakeFiles/kiwi-unit-test.dir/io/io_writer_test.cpp.o
+[ 78%] Building CXX object tests/unit/CMakeFiles/kiwi-unit-test.dir/utils/bundle_test.cpp.o
+[ 84%] Building CXX object tests/unit/CMakeFiles/kiwi-unit-test.dir/utils/mpi_utils_test.cpp.o
+[ 89%] Building CXX object tests/unit/CMakeFiles/kiwi-unit-test.dir/logs/logs_test.cpp.o
+[ 94%] Building CXX object tests/unit/CMakeFiles/kiwi-unit-test.dir/io/local_storage_test.cpp.o
+[100%] Linking CXX executable ../../bin/kiwi-unit-test
+[100%] Built target kiwi-unit-test
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/lib/libkiwi.a
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/kiwi_app.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/event
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/event/message_looper.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/event/message_runner.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/logs
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/logs/colors.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/logs/logs.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/config
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/config/config.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/io
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/io/io_utils.hpp
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/io/io_writer.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/io/local_storage.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/platform
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/platform/mpi_support.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/utils
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/utils/mpi_utils.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/utils/data_def.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/utils/bundle.h
+-- Old export file "/public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/lib/cmake/kiwi/kiwi-targets.cmake" will be replaced.  Removing files [/public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/lib/cmake/kiwi/kiwi-targets-release.cmake].
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/lib/cmake/kiwi/kiwi-targets.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/lib/cmake/kiwi/kiwi-targets-release.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/lib/cmake/kiwi/kiwi-config.cmake
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/test
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/include/test/gtest_env.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/genshen/kiwi/bin/kiwi-unit-test
+time="2025-07-11T17:29:42+08:00" level=info msg="package built and installed." pkg=git.hpcer.dev/genshen/kiwi
+time="2025-07-11T17:29:42+08:00" level=info msg="installing package." pkg=git.hpcer.dev/HPCer/MISA-MD/libcomm
+time="2025-07-11T17:29:43+08:00" level=info msg="running [ cmake -S \"/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/HPCer/MISA-MD/libcomm@v0.3.3\" -B \"/public/home/wangj/duhao/original_kmc/vendor/cache/git.hpcer.dev/HPCer/MISA-MD/libcomm\" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=\"/public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm\"  ] in directory  /public/home/wangj/duhao/original_kmc"
+-- The C compiler identification is GNU 8.5.0
+-- The CXX compiler identification is GNU 8.5.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found MPI_C: /public/home/sghpc_sdk/Linux_x86_64/25.6/comm_libs/openmpi/5.0.3-flang/lib/libmpi.so (found version "3.1") 
+-- Found MPI_CXX: /public/home/sghpc_sdk/Linux_x86_64/25.6/comm_libs/openmpi/5.0.3-flang/lib/libmpi.so (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- MPI_INCLUDE dir:/public/home/sghpc_sdk/Linux_x86_64/25.6/comm_libs/openmpi/5.0.3-flang/include/public/home/sghpc_sdk/Linux_x86_64/25.6/comm_libs/openmpi/5.0.3-flang/include/openmpi
+-- MPI_LIBRARIES dir:/public/home/sghpc_sdk/Linux_x86_64/25.6/comm_libs/openmpi/5.0.3-flang/lib/libmpi.so
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- TEST is enabled
+-- MPI in test: ON
+-- Configuring done (8.4s)
+-- Generating done (2.9s)
+-- Build files have been written to: /public/home/wangj/duhao/original_kmc/vendor/cache/git.hpcer.dev/HPCer/MISA-MD/libcomm
+time="2025-07-11T17:29:55+08:00" level=info msg="running [ cmake --build \"/public/home/wangj/duhao/original_kmc/vendor/cache/git.hpcer.dev/HPCer/MISA-MD/libcomm\" --target install  ] in directory  /public/home/wangj/duhao/original_kmc"
+[  5%] Building CXX object src/CMakeFiles/comm.dir/comm/domain/domain.cc.o
+[ 11%] Building CXX object src/CMakeFiles/comm.dir/comm/domain/bcc_domain.cc.o
+[ 17%] Building CXX object src/CMakeFiles/comm.dir/comm/domain/colored_domain.cc.o
+[ 23%] Building CXX object src/CMakeFiles/comm.dir/comm/preset/comm_forwarding_region.cc.o
+/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/HPCer/MISA-MD/libcomm@v0.3.3/src/comm/preset/comm_forwarding_region.cc: 在函数‘comm::Region<long int> comm::fwCommLocalSendRegion(const _type_lattice_size*, comm::Region<long int>, unsigned int, unsigned int)’中:
+/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/HPCer/MISA-MD/libcomm@v0.3.3/src/comm/preset/comm_forwarding_region.cc:70:9: 警告：在有返回值的函数中，控制流程到达函数尾 [-Wreturn-type]
+         default:
+         ^~~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/HPCer/MISA-MD/libcomm@v0.3.3/src/comm/preset/comm_forwarding_region.cc: 在函数‘comm::Region<long int> comm::fwCommLocalRecvRegion(const _type_lattice_size*, comm::Region<long int>, unsigned int, unsigned int)’中:
+/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/HPCer/MISA-MD/libcomm@v0.3.3/src/comm/preset/comm_forwarding_region.cc:92:9: 警告：在有返回值的函数中，控制流程到达函数尾 [-Wreturn-type]
+         default:
+         ^~~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/HPCer/MISA-MD/libcomm@v0.3.3/src/comm/preset/comm_forwarding_region.cc: 在函数‘comm::Region<long int> comm::fwCommLocalRegion(const comm::BccDomain*, unsigned int, unsigned int)’中:
+/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/HPCer/MISA-MD/libcomm@v0.3.3/src/comm/preset/comm_forwarding_region.cc:161:9: 警告：在有返回值的函数中，控制流程到达函数尾 [-Wreturn-type]
+         default:
+         ^~~~~~~
+/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/HPCer/MISA-MD/libcomm@v0.3.3/src/comm/preset/comm_forwarding_region.cc: 在函数‘comm::Region<double> comm::fwCommLocalMeaRegion(const comm::Domain*, unsigned int, unsigned int)’中:
+/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/HPCer/MISA-MD/libcomm@v0.3.3/src/comm/preset/comm_forwarding_region.cc:230:9: 警告：在有返回值的函数中，控制流程到达函数尾 [-Wreturn-type]
+         default:
+         ^~~~~~~
+[ 29%] Building CXX object src/CMakeFiles/comm.dir/comm/preset/sector_forwarding_region.cc.o
+[ 35%] Linking CXX static library ../lib/libcomm.a
+[ 35%] Built target comm
+[ 41%] Building CXX object tests/unit/CMakeFiles/unit-test.dir/main.cpp.o
+[ 47%] Building CXX object tests/unit/CMakeFiles/unit-test.dir/domain/domain_test.cpp.o
+/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/HPCer/MISA-MD/libcomm@v0.3.3/tests/unit/domain/domain_test.cpp: 在成员函数‘virtual void domain_test_decomposition_domain_test_Test::TestBody()’中:
+/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/HPCer/MISA-MD/libcomm@v0.3.3/tests/unit/domain/domain_test.cpp:22:58: 警告：narrowing conversion of ‘(comm::_type_lattice_size)_domain->comm::Domain::sub_box_lattice_size[0]’ from ‘comm::_type_lattice_size’ {aka ‘long int’} to ‘int’ inside { } [-Wnarrowing]
+     int local_grid[3] = {(_domain->sub_box_lattice_size[0]),
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/HPCer/MISA-MD/libcomm@v0.3.3/tests/unit/domain/domain_test.cpp:23:58: 警告：narrowing conversion of ‘(comm::_type_lattice_size)_domain->comm::Domain::sub_box_lattice_size[1]’ from ‘comm::_type_lattice_size’ {aka ‘long int’} to ‘int’ inside { } [-Wnarrowing]
+                          (_domain->sub_box_lattice_size[1]),
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/HPCer/MISA-MD/libcomm@v0.3.3/tests/unit/domain/domain_test.cpp:24:58: 警告：narrowing conversion of ‘(comm::_type_lattice_size)_domain->comm::Domain::sub_box_lattice_size[2]’ from ‘comm::_type_lattice_size’ {aka ‘long int’} to ‘int’ inside { } [-Wnarrowing]
+                          (_domain->sub_box_lattice_size[2])};
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+[ 52%] Building CXX object tests/unit/CMakeFiles/unit-test.dir/domain/domain_test_utils.cpp.o
+[ 58%] Building CXX object tests/unit/CMakeFiles/unit-test.dir/domain/region_test.cpp.o
+[ 64%] Building CXX object tests/unit/CMakeFiles/unit-test.dir/domain/bcc_domain_test.cpp.o
+[ 70%] Building CXX object tests/unit/CMakeFiles/unit-test.dir/domain/colored_domain_test.cpp.o
+[ 76%] Building CXX object tests/unit/CMakeFiles/unit-test.dir/preset/comm_forwarding_region_test.cpp.o
+/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/HPCer/MISA-MD/libcomm@v0.3.3/tests/unit/preset/comm_forwarding_region_test.cpp: 在函数‘comm::Region<long int> TEST_receive_region_imp(const _type_lattice_size*, comm::Region<long int>, unsigned int, unsigned int)’中:
+/public/home/wangj/duhao/original_kmc/vendor/src/git.hpcer.dev/HPCer/MISA-MD/libcomm@v0.3.3/tests/unit/preset/comm_forwarding_region_test.cpp:98:9: 警告：在有返回值的函数中，控制流程到达函数尾 [-Wreturn-type]
+         default:
+         ^~~~~~~
+[ 82%] Building CXX object tests/unit/CMakeFiles/unit-test.dir/preset/sector_forwarding_direction_test.cpp.o
+[ 88%] Building CXX object tests/unit/CMakeFiles/unit-test.dir/preset/sector_forwarding_region_test.cpp.o
+[ 94%] Building CXX object tests/unit/CMakeFiles/unit-test.dir/region_packer_test.cpp.o
+[100%] Linking CXX executable ../../bin/unit-test
+[100%] Built target unit-test
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/lib/libcomm.a
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/packer.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/comm.inl
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/types_define.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/domain
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/domain/builder.inl
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/domain/domain.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/domain/colored_domain.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/domain/bcc_domain.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/domain/builder.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/domain/region.hpp
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/domain/region.inl
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/comm.hpp
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/region_packer.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/preset
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/preset/sector_forwarding_region.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/preset/comm_forwarding_region.h
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/include/comm/preset/sector_forwarding_direction.h
+-- Old export file "/public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/lib/cmake/comm/comm-targets.cmake" will be replaced.  Removing files [/public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/lib/cmake/comm/comm-targets-release.cmake].
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/lib/cmake/comm/comm-targets.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/lib/cmake/comm/comm-targets-release.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/lib/cmake/comm/comm-config.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/git.hpcer.dev/HPCer/MISA-MD/libcomm/bin/unit-test
+time="2025-07-11T17:30:13+08:00" level=info msg="package built and installed." pkg=git.hpcer.dev/HPCer/MISA-MD/libcomm
+time="2025-07-11T17:30:13+08:00" level=info msg="installing package." pkg=github.com/misa-kmc/xoshiro
+time="2025-07-11T17:30:14+08:00" level=info msg="running [ cmake -S \"/public/home/wangj/duhao/original_kmc/vendor/src/github.com/misa-kmc/xoshiro@v0.1.1\" -B \"/public/home/wangj/duhao/original_kmc/vendor/cache/github.com/misa-kmc/xoshiro\" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=\"/public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/misa-kmc/xoshiro\"  ] in directory  /public/home/wangj/duhao/original_kmc"
+-- The C compiler identification is GNU 8.5.0
+-- The CXX compiler identification is GNU 8.5.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- TEST is enabled
+-- Configuring done (4.3s)
+-- Generating done (0.6s)
+-- Build files have been written to: /public/home/wangj/duhao/original_kmc/vendor/cache/github.com/misa-kmc/xoshiro
+time="2025-07-11T17:30:19+08:00" level=info msg="running [ cmake --build \"/public/home/wangj/duhao/original_kmc/vendor/cache/github.com/misa-kmc/xoshiro\" --target install  ] in directory  /public/home/wangj/duhao/original_kmc"
+[ 25%] Building CXX object src/CMakeFiles/xoshiro.dir/xoshiro.cpp.o
+[ 50%] Linking CXX static library ../lib/libxoshiro.a
+[ 50%] Built target xoshiro
+[ 75%] Building CXX object tests/unit/CMakeFiles/xoshiro-unit-tests.dir/oshinro_random_test.cpp.o
+[100%] Linking CXX executable ../../bin/xoshiro-unit-tests
+[100%] Built target xoshiro-unit-tests
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/misa-kmc/xoshiro/lib/libxoshiro.a
+-- Up-to-date: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/misa-kmc/xoshiro/include
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/misa-kmc/xoshiro/include/xoshiro.h
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/misa-kmc/xoshiro/include/xoshiro_gen.h
+-- Old export file "/public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/misa-kmc/xoshiro/lib/cmake/xoshiro/xoshiro-targets.cmake" will be replaced.  Removing files [/public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/misa-kmc/xoshiro/lib/cmake/xoshiro/xoshiro-targets-release.cmake].
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/misa-kmc/xoshiro/lib/cmake/xoshiro/xoshiro-targets.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/misa-kmc/xoshiro/lib/cmake/xoshiro/xoshiro-targets-release.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/misa-kmc/xoshiro/lib/cmake/xoshiro/xoshiro-config.cmake
+-- Installing: /public/home/wangj/duhao/original_kmc/vendor/pkg/github.com/misa-kmc/xoshiro/bin/xoshiro-unit-tests
+time="2025-07-11T17:30:22+08:00" level=info msg="package built and installed." pkg=github.com/misa-kmc/xoshiro
+time="2025-07-11T17:30:22+08:00" level=info msg="all packages installed successfully."

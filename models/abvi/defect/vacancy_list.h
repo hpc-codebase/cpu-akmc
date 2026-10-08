@@ -21,11 +21,13 @@ public:
   inline _type_neighbour_status availTranDirs(_type_neighbour_status nei_status,
                                               Lattice *_1nn_lats[LatticesList::MAX_1NN]) override;
 
+  inline _type_neighbour_status availTranDirs2(_type_neighbour_status nei_status, Lattice *_1nn_lats);
+
   /**
    * \brief be called before calling updateRates.
    */
   void beforeRatesUpdate(Lattice *list_1nn[LatticesList::MAX_1NN], _type_neighbour_status status_1nn) override;
-
+  void beforeRatesUpdate2(Lattice list_1nn[LatticesList::MAX_1NN], _type_neighbour_status status_1nn);
   /**
    * \brief update transition rate for each possible 1nn neighbour lattices of this vacancy.
    *

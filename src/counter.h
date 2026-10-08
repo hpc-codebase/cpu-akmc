@@ -21,6 +21,7 @@ struct EnumClassHash {
  * including the count of different types of atoms,dumbbells,vacancy for each
  * steps.
  */
+// KMC缺陷计数器。包括不同类型原子的计数，哑铃，每个原子的空位
 class counter {
 public:
   typedef std::string (*fn_lat_type_to_str)(LatticeTypes::lat_type);
@@ -76,7 +77,7 @@ public:
   friend std::ostream &operator<<(std::ostream &os, const counter &cv);
 
 protected:
-  std::unordered_map<LatticeTypes::lat_type, int, std::hash<int>> data;
+  std::unordered_map<LatticeTypes::lat_type, _type_lattice_coord, std::hash<_type_lattice_coord>> data;
 
   /**
    * \brief function to convert lattice type to string

@@ -43,6 +43,8 @@ public:
 class TestSLModel : public ModelAdapter<int> {
   double calcRates(const lat_region region) override { return 1.0; }
 
+  double calcRatesGPU(const lat_region region) override { return 2.0; }
+
   int select(lat_region region, _type_rate, _type_rate) override { return 0; }
 
   void perform(const int) override {}

@@ -16,16 +16,18 @@ ItlRatesSolver::ItlRatesSolver(LatticesList &lat_list, VacancyList &va_list, Itl
 double ItlRatesSolver::e0(const LatticeTypes::lat_type ghost_atom) const {
 
   switch (ghost_atom) {
-  case LatticeTypes::Fe:
-    return 0.32;
-  case LatticeTypes::Cu:
-    return 0.36;
-  case LatticeTypes::Ni:
-    return 0.45;
-  case LatticeTypes::Mn:
-    return 0.31;
-  default:
-    return 0;
+    case LatticeTypes::Mo:
+      return 0.65;
+    case LatticeTypes::Re:
+      return 0.54;
+    case LatticeTypes::Mn:
+      return 1.03;
+    case LatticeTypes::Ni:
+      return 0.68;
+    case LatticeTypes::Si:
+      return 0.42;
+    default:
+      return 0;
   }
 }
 

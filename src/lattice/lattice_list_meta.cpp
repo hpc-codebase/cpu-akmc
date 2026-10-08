@@ -22,6 +22,7 @@ LatListMeta::LatListMeta(const _type_box_size box_x, const _type_box_size box_y,
 _type_lattice_id LatListMeta::getIdBy1nnOffset(const _type_lattice_id lat_id, const _type_dir_id _1nn_offset) const {
   _type_lattice_coord x, y, z;
   getCoordByLId(lat_id, &x, &y, &z);
+  // if(lat_id == 208884 || lat_id == 243544) std::cout << " x is : " << x << " y is : " << y << " z is : " << z << std::endl;
   if (x % 2 == 0) {
     switch (_1nn_offset) {
     case 0:

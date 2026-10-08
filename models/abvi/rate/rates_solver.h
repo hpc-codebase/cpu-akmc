@@ -40,7 +40,7 @@ public:
   virtual const _type_rate rate(Lattice &source_lattice, Lattice &target_lattice,
                                 const LatticeTypes::lat_type ghost_atom, const _type_dir_id _1nn_offset);
 
-protected:
+public:
   /**
    * \brief reference of all lattice points.
    */

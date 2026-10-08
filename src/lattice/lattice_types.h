@@ -19,32 +19,44 @@ struct LatticeTypes {
    */
   typedef enum {
     V = 0,
-    Fe = 0x0001,
-    Cu = 0x0002,
-    Ni = 0x0004,
-    Mn = 0x0008,
-    FeFe = 0x0101,
-    FeCu = 0x0102,
-    FeNi = 0x0104,
-    FeMn = 0x0108,
-    CuCu = 0x0202,
-    CuNi = 0x0204,
-    CuMn = 0x0208,
-    NiNi = 0x0404,
-    NiMn = 0x0408,
-    MnMn = 0x0808,
+    Mo = 0x0001,
+    Re = 0x0002,
+    Mn = 0x0004,
+    Ni = 0x0008,
+    Si = 0x0010,
+    MoMo = 0x0101,
+    MoRe = 0x0102,
+    MoMn = 0x0104,
+    MoNi = 0x0108,
+    MoSi = 0x0110,
+    ReRe = 0x0202,
+    ReMn = 0x0204,
+    ReNi = 0x0208,
+    ReSi = 0x0210,
+    MnMn = 0x0404,
+    MnNi = 0x0408,
+    MnSi = 0x0410,
+    NiNi = 0x0808,
+    NiSi = 0x0810,
+    SiSi = 0x1010,
   } lat_type;
 
   lat_type _type;
 
   // initialize \member _type
-  explicit LatticeTypes(lat_type tp) : _type(tp) {}
+  //explicit LatticeTypes(lat_type tp) : _type(tp) {}
+  LatticeTypes() {
+    _type = V;
+  }
 
+  LatticeTypes(lat_type tp) {
+    _type = tp;
+  }
   // default value of _type is V
-  explicit LatticeTypes() : _type(V) {}
+  //explicit LatticeTypes() : _type(V) {}
 
-  const static uint16_t c = 4;
-  const static uint16_t dumbbell_critical_point = 1 << (c - 1); // 0x0008 (max single atom enum)
+  const static uint16_t c = 5;
+  const static uint16_t dumbbell_critical_point = 1 << (c - 1); // 0x0010 (max single atom enum)
   const static uint16_t high_endian_shift = 8; // 8 bits of left shift for one atom type in inter lattices.
 
   inline bool isDumbbell() const { return _type > dumbbell_critical_point; }
@@ -147,8 +159,8 @@ struct LatticeTypes {
    * \param hit a random number between [1, sum{\param ratio}].
    * \return the created lattice type.
    */
-  static lat_type randomAtomsType(const lat_type source_type[], const unsigned int ratio[], const unsigned int len,
-                                  const unsigned int hit);
+  static lat_type randomAtomsType(const lat_type source_type[], const int64_t ratio[], const unsigned int len,
+                                  const int64_t hit);
 
   /**
    * \brief combine current type with another atom type.

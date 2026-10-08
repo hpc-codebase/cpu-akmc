@@ -16,6 +16,7 @@ set(HEADER_FILES
         pack/ghost_sync_packer.h
         pack/packer_instance.h
         pack/sim_sync_packer.h
+        pack/sim_ghost_combine_packer.h
         utils/macros.h
         utils/mpi_types.h
         utils/random/rand_generators.h
@@ -46,6 +47,7 @@ set(SOURCE_FILES
         pack/ghost_sync_packer.cpp
         pack/packer_instance.cpp
         pack/sim_sync_packer.cpp
+        pack/sim_ghost_combine_packer.cpp
         utils/mpi_types.cpp
         utils/random/rand_generators.cpp
         utils/random/random.cpp
@@ -62,6 +64,10 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
 
 # make lib.
 add_library(${PKMC_LIB_NAME} STATIC ${HEADER_FILES} ${SOURCE_FILES})
+
+target_compile_options(${PKMC_LIB_NAME} PRIVATE -D__HIP_PLATFORM_AMD__= -DTHRUST_DEVICE_SYSTEM=THRUST_DEVICE_SYSTEM_HIP  -D__HIP__ -D__HIP_PLATFORM_AMD__)
+
+target_compile_options(${PKMC_LIB_NAME} PRIVATE ${OpenMP_CXX_FLAGS})
 
 target_include_directories(
         ${PKMC_LIB_NAME}

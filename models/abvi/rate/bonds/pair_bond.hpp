@@ -10,25 +10,31 @@
 namespace bonds {
   struct PairBond {
     /**
-     * \brief enum of pairs among {V,Fe,Cu,Ni,Mn}
-     *
+     * \brief enum of pairs among {V, Mo, Re, Mn, Ni, Si}
+     * 
      */
     typedef enum {
       VV = 0x0000,
-      VFe = 0x0001,
-      VCu = 0x0002,
-      VNi = 0x0004,
-      VMn = 0x0008,
-      FeFe = 0x0101,
-      FeCu = 0x0102,
-      FeNi = 0x0104,
-      FeMn = 0x0108,
-      CuCu = 0x0202,
-      CuNi = 0x0204,
-      CuMn = 0x0208,
-      NiNi = 0x0404,
-      NiMn = 0x0408,
-      MnMn = 0x0808,
+      VMo = 0x0001,
+      VRe = 0x0002,
+      VMn = 0x0004,
+      VNi = 0x0008,
+      VSi = 0x0010,
+      MoMo = 0x0101,
+      MoRe = 0x0102,
+      MoMn = 0x0104,
+      MoNi = 0x0108,
+      MoSi = 0x0110,
+      ReRe = 0x0202,
+      ReMn = 0x0204,
+      ReNi = 0x0208,
+      ReSi = 0x0210,
+      MnMn = 0x0404,
+      MnNi = 0x0408,
+      MnSi = 0x0410,
+      NiNi = 0x0808,
+      NiSi = 0x0810,
+      SiSi = 0x1010,
     } bond_type;
     const bond_type bond;
 

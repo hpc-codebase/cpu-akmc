@@ -29,11 +29,30 @@ _type_neighbour_status Vacancy::availTranDirs(_type_neighbour_status nei_status,
   return atom_nei_status;
 }
 
+_type_neighbour_status Vacancy::availTranDirs2(_type_neighbour_status nei_status, Lattice *_1nn_lats) {
+  _type_dirs_status atom_nei_status = 0;
+  for (int b = 0; b < LatticesList::MAX_NEI_BITS; b++) {
+    if (((nei_status >> b) & 1) && _1nn_lats[b].type._type != LatticeTypes::V) { // can trans
+      atom_nei_status |= 1 << b;
+    }
+  }
+  return atom_nei_status;
+}
+
 void Vacancy::beforeRatesUpdate(Lattice *list_1nn[LatticesList::MAX_1NN], _type_neighbour_status status_1nn) {
   // zero rates array
   Defect::beforeRatesUpdate(list_1nn, status_1nn);
   // set available transition dir.
   avail_trans_dir = availTranDirs(status_1nn, list_1nn);
+}
+
+void Vacancy::beforeRatesUpdate2(Lattice list_1nn[LatticesList::MAX_1NN], _type_neighbour_status status_1nn) {
+  // zero rates array
+  for (_type_rate &rate : rates) {
+    rate = 0;
+  }
+  // set available transition dir.
+  avail_trans_dir = availTranDirs2(status_1nn, list_1nn);
 }
 
 void Vacancy::updateRates(Lattice &lattice, Lattice *list_1nn[LatticesList::MAX_1NN], _type_neighbour_status status_1nn,

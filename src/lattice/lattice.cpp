@@ -5,3 +5,4 @@
 #include "lattice.h"
 
 Lattice::Lattice() : id(0) {}
+ChangeLattice::ChangeLattice() : x(0) {}

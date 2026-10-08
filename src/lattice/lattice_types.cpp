@@ -6,16 +6,16 @@
 #include <cstdlib>
 #include <utils/random/random.h>
 
-LatticeTypes::lat_type LatticeTypes::randomAtomsType(const lat_type source_type[], const unsigned int ratio[],
-                                                     const unsigned int len, const unsigned int hit) {
-  unsigned int rank_local = 0;
-  for (unsigned int i = 0; i < len; i++) {
+LatticeTypes::lat_type LatticeTypes::randomAtomsType(const lat_type source_type[], const int64_t ratio[],
+                                                     const unsigned int len, const int64_t hit) {
+  int64_t rank_local = 0;
+  for (int64_t i = 0; i < len; i++) {
     rank_local += ratio[i];
     if (rank_local >= hit) {
-      return static_cast<lat_type>(source_type[i]);
+      return static_cast<lat_type>(source_type[i]); // 强制类型转化，但其实这里的source_type[i]也是lat_type类型的
     }
   }
-  return Fe;
+  return Mo;
 }
 
 LatticeTypes::lat_type LatticeTypes::combineToInter(lat_type atom_a, lat_type atom_b) {

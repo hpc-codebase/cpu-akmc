@@ -7,6 +7,10 @@ if (KMC_DEBUG_ENABLE_FLAG)
     set(KMC_DEBUG_MODE ON)
 endif ()
 
+if (KMC_HIP_ENABLE_FLAG)
+    set(KMC_GPU_MODE ON)
+endif ()
+
 if (KMC_RAND MATCHES "LCG")
     set(RAND_LCG TRUE)
 elseif (KMC_RAND MATCHES "MT")

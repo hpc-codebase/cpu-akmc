@@ -6,7 +6,7 @@
 #define MISA_KMC_VACANCY_RATES_SOLVER_H
 
 #include "rates_solver.h"
-
+#include "abvi/defect/vac_hash.h"
 /**
  * \brief solve the transition rate from a vacancy to its neighbour whose type is a single atom.
  * (in this model, neighbour type of dumbbell and vacancy is not allowed)

@@ -8,6 +8,11 @@
 #include <comm/domain/colored_domain.h>
 #include <type_define.h>
 #include <utils/random/random.h>
+#include <vector>
+#include <array>
+#include "lattice/lattice.h"
+#include <unordered_set>
+#include <comm/preset/sector_forwarding_region.h>
 
 /**
  * \brief this is kmc model adapter
@@ -17,6 +22,20 @@ template <typename E> class ModelAdapter {
 public:
   typedef comm::Region<comm::_type_lattice_size> lat_region;
 
+  const comm::ColoredDomain *p_domain = nullptr;
+
+  std::array<comm::Region<comm::_type_lattice_size>, 56> ghost_region;
+
+  // std::array<std::vector<ChangeLattice>, 7> exchange_ghost;
+  std::array<std::unordered_set<_type_lattice_id>, 7> exchange_ghost;
+
+  // 8 个扇区的 surface 的按需发送区
+  std::array<std::unordered_set<_type_lattice_id>, 8> exchange_surface_x;
+
+  std::array<std::unordered_set<_type_lattice_id>, 8> exchange_surface_y;
+
+  std::array<std::unordered_set<_type_lattice_id>, 8> exchange_surface_z;
+
   ModelAdapter();
 
   /**
@@ -25,6 +44,15 @@ public:
    */
   virtual _type_rate calcRates(const lat_region region) = 0;
 
+  virtual _type_rate calcRatesGPU(const lat_region region, int sect) = 0;
+
+  virtual void set_ghost_region() = 0;
+
+  virtual void clear_exchange_ghost() = 0;
+
+  virtual void clear_exchange_surface(const unsigned int next_sect) = 0;
+
+  // virtual _type_rate calcRatesGPU(const lat_region region, bool *sector_first) = 0;
   /**
    * \brief select an event from rates list in the given region
    * \param excepted_rate excepted rate
@@ -37,14 +65,24 @@ public:
   /**
    * \brief perform the kmv event.
    */
-  virtual void perform(const E e) = 0;
+  virtual void perform(const E e, const lat_region region, int rank, _type_lattice_count step, int sect, const unsigned int sector_id, const unsigned int next_sector_id) = 0;
+
+  virtual void selectAndPerformOnGPU(const _type_rate rate, int rank, _type_lattice_count step, int sect, const unsigned int sector_id, const unsigned int next_sector_id) = 0;
+
+  virtual void recb_checki(const lat_region region, const unsigned int sector_id) = 0;
+
+  virtual void recb_solver(_type_lattice_id id, const lat_region& region, const unsigned int& sector_id) = 0;
 
   /**
    * \brief select an event and perform the event.
    * this is the wrapper function for \fn select() and \fn perform()
    * \param sum_rates the total rates
    */
-  void selectAndPerform(const lat_region region, const _type_rate sum_rates);
+  void selectAndPerform(const lat_region region, const _type_rate sum_rates, int rank, _type_lattice_count step, int sect, const unsigned int sector_id, const unsigned int next_sector_id);
+
+  void selectAndPerformGPU(int rank, _type_lattice_count step, int sect, const unsigned int sector_id, const unsigned int next_sector_id);
+
+  void recb(const lat_region region, const unsigned int sector_id);
 
   /**
    * \brief reindex defect list in a specific region.
@@ -63,9 +101,20 @@ public:
 
 template <typename E> ModelAdapter<E>::ModelAdapter() {}
 
-template <class E> void ModelAdapter<E>::selectAndPerform(const lat_region region, const _type_rate sum_rates) {
+template <class E> void ModelAdapter<E>::selectAndPerform(const lat_region region, const _type_rate sum_rates, int rank, _type_lattice_count step, int sect, const unsigned int sector_id, const unsigned int next_sector_id) {
+  // [0, sum_rates)
   E e = select(region, rand() * sum_rates, sum_rates);
-  perform(e);
+  // E e = select(rand() * sum_rates);
+  // E e = select(region, rand() * 1.0, sum_rates);
+  perform(e, region, rank, step, sect, sector_id, next_sector_id);
+}
+
+template <class E> void ModelAdapter<E>::recb(const lat_region region, const unsigned int sector_id) {
+  recb_checki(region, sector_id);
+}
+
+template <class E> void ModelAdapter<E>::selectAndPerformGPU(int rank, _type_lattice_count step, int sect, const unsigned int sector_id, const unsigned int next_sector_id) {
+  selectAndPerformOnGPU(rand(), rank, step, sect, sector_id, next_sector_id);
 }
 
 #endif // MISA_KMC_MODEL_ADAPTER_H

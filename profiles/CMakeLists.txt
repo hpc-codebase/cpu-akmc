@@ -30,12 +30,18 @@ add_library(${P_KMP_PROFILE_LIB_NAME} STATIC
         seed_relocate.h
         )
 
+
+target_compile_options(${P_KMP_PROFILE_LIB_NAME} PRIVATE -D__HIP_PLATFORM_AMD__= -DTHRUST_DEVICE_SYSTEM=THRUST_DEVICE_SYSTEM_HIP  -D__HIP__ -D__HIP_PLATFORM_AMD__)
+
+target_compile_options(${P_KMP_PROFILE_LIB_NAME} PRIVATE ${OpenMP_CXX_FLAGS})
+
 target_include_directories(${P_KMP_PROFILE_LIB_NAME} PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
         $<INSTALL_INTERFACE:include>
         )
 
 target_link_libraries(${P_KMP_PROFILE_LIB_NAME} PUBLIC
+        OpenMP::OpenMP_CXX
         kiwi::kiwi
         yaml-cpp
         ${PKMC_LIB_NAME}
@@ -43,6 +49,10 @@ target_link_libraries(${P_KMP_PROFILE_LIB_NAME} PUBLIC
         )
 
 add_executable(${P_KMC_EXECUTE_BIN_NAME} profile.cpp)
+
+target_compile_options(${P_KMC_EXECUTE_BIN_NAME} PRIVATE -D__HIP_PLATFORM_AMD__= -DTHRUST_DEVICE_SYSTEM=THRUST_DEVICE_SYSTEM_HIP  -D__HIP__ -D__HIP_PLATFORM_AMD__)
+
+target_compile_options(${P_KMC_EXECUTE_BIN_NAME} PRIVATE ${OpenMP_CXX_FLAGS})
 
 target_link_libraries(${P_KMC_EXECUTE_BIN_NAME} PRIVATE
         ${P_KMP_PROFILE_LIB_NAME}

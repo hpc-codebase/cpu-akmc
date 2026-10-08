@@ -18,19 +18,19 @@ void ans::analysis(LatticesList *lats_list) {
     for (_type_lattice_coord y = region.y_low; y < region.y_high; y++) {
       for (_type_lattice_coord x = region.x_low; x < region.x_high; x++) {
         Lattice lattice = lats_list->getLat(x, y, z);
-        if (lattice.type._type == LatticeTypes::Cu) {
+        if (lattice.type._type == LatticeTypes::Re) {
           lats_list->get1nn(x, y, z, _1nn_list);
           const _type_neighbour_status nei_status = lats_list->get1nnBoundaryStatus(x, y, z);
-          bool has_neighbor_cu = false;
+          bool has_neighbor_re = false;
           // travel its 1nn  neighbor
           for (int b = 0; b < LatticesList::MAX_NEI_BITS; b++) {
             // the neighbour lattice is available.
-            // and the neighbour lattice is also Cu
-            if (((nei_status >> b) & 1) && (_1nn_list[b]->type._type == LatticeTypes::Cu)) {
-              has_neighbor_cu = true;
+            // and the neighbour lattice is also Re
+            if (((nei_status >> b) & 1) && (_1nn_list[b]->type._type == LatticeTypes::Re)) {
+              has_neighbor_re = true;
             }
           }
-          if (!has_neighbor_cu) {
+          if (!has_neighbor_re) {
             single_cu++;
           }
         }
